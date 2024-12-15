@@ -1,2 +1,2 @@
-#Sharp Shooter Game
-- A game made in Unity 
+Sharp Shooter 
+A game made in Unity.

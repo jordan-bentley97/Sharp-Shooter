@@ -43,6 +43,11 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		public void OnShoot(InputValue value)
+		{
+			ShootInput(value.isPressed);
+		}
 #endif
 
 
@@ -64,6 +69,12 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+
+
+		public void ShootInput(bool newShootState)
+		{
+			sprint = newShootState;
 		}
 		
 		private void OnApplicationFocus(bool hasFocus)

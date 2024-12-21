@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
+    [SerializeField] GameObject hitVFXPrefab;
     [SerializeField] int damageAmount;
     [SerializeField] ParticleSystem muzzleflash;
     [SerializeField] Animator animator;
@@ -30,8 +31,11 @@ public class Weapon : MonoBehaviour {
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity)) {
 
+            Instantiate(hitVFXPrefab, hit.point, Quaternion.identity);
             EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
             enemyHealth?.takeDamage(damageAmount);
+
+            
         }
     }
 }

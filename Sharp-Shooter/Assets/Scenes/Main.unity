@@ -3195,6 +3195,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 361276269331792758, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 361276269331792758, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
       propertyPath: scalingMode
       value: 0
       objectReference: {fileID: 0}
@@ -3221,6 +3225,10 @@ PrefabInstance:
     - target: {fileID: 572095283498608022, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307306719591904792, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1429369069715679109, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

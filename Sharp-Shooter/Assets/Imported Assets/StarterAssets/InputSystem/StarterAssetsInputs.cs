@@ -12,6 +12,7 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool shoot;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -71,10 +72,9 @@ namespace StarterAssets
 			sprint = newSprintState;
 		}
 
-
 		public void ShootInput(bool newShootState)
 		{
-			sprint = newShootState;
+			shoot = newShootState;
 		}
 		
 		private void OnApplicationFocus(bool hasFocus)

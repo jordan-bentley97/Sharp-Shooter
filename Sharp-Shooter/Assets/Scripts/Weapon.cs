@@ -34,8 +34,6 @@ public class Weapon : MonoBehaviour {
             Instantiate(hitVFXPrefab, hit.point, Quaternion.identity);
             EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
             enemyHealth?.takeDamage(damageAmount);
-
-            
         }
     }
 }

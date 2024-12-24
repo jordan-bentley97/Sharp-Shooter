@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3052c4d1b1ea9469d06fb3f0a9fcf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muzzleFlash: {fileID: 0}
+  muzzleFlash: {fileID: 7893315032382474162}
 --- !u!1 &5251001726490451533
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,5 +221,10 @@ PrefabInstance:
 --- !u!4 &3002005342493200910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6199080982931891108, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
+  m_PrefabInstance: {fileID: 9200516194252698026}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7893315032382474162 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1307306719591904792, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
   m_PrefabInstance: {fileID: 9200516194252698026}
   m_PrefabAsset: {fileID: 0}

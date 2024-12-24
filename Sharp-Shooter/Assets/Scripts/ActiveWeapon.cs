@@ -40,4 +40,15 @@ public class ActiveWeapon : MonoBehaviour {
             starterAssetsInputs.ShootInput(false);
         }
     }
+
+    public void SwitchWeapon(WeaponSO weaponSO) {
+        if (currentWeapon) {
+            Destroy(currentWeapon.gameObject);
+        }
+
+        Weapon newWeapon = Instantiate(weaponSO.weaponPrefab, transform).GetComponent<Weapon>();
+        currentWeapon = newWeapon;
+        this.weaponSO = weaponSO;
+
+    }
 }

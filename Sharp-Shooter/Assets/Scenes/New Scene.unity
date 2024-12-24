@@ -19950,7 +19950,7 @@ PrefabInstance:
     - target: {fileID: 3176088914953106489, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
       propertyPath: muzzleFlash
       value: 
-      objectReference: {fileID: 1576757584}
+      objectReference: {fileID: 0}
     - target: {fileID: 4396783906645054535, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -19996,7 +19996,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6766770390167786878, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9069630047242149687, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
@@ -28623,11 +28624,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!198 &1576757584 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8277937028148285447, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
-  m_PrefabInstance: {fileID: 1065335375}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1591603147
 GameObject:
   m_ObjectHideFlags: 0

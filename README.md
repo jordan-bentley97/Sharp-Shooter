@@ -1,2 +1,1 @@
-Sharp Shooter 
-A game made in Unity.
+A FPS game made in Unity following [a course](https://www.udemy.com/course/unitycourse2/).

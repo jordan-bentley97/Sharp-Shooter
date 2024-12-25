@@ -4,7 +4,8 @@ using Cinemachine;
 
 public class ActiveWeapon : MonoBehaviour {
 
-    [SerializeField] WeaponSO weaponSO;
+    [SerializeField] WeaponSO startingWeapon;
+    [SerializeField] WeaponSO CurrentWeaponSO;
     [SerializeField] CinemachineVirtualCamera playerFollowCamera;
     [SerializeField] GameObject zoomVignette;
 
@@ -16,6 +17,7 @@ public class ActiveWeapon : MonoBehaviour {
     float timeSinceLastShot = 0f;
     float defaultFOV;
     float defaultRotationSpeed;
+    int currentAmmo;
 
     const string SHOOT_STRING = "Shoot";
 
@@ -42,24 +44,24 @@ public class ActiveWeapon : MonoBehaviour {
         
         if (!starterAssetsInputs.shoot) return;
 
-        if (timeSinceLastShot >= weaponSO.FireRate) {
-            currentWeapon.Shoot(weaponSO);
+        if (timeSinceLastShot >= CurrentWeaponSO.FireRate) {
+            currentWeapon.Shoot(CurrentWeaponSO);
             animator.Play(SHOOT_STRING, 0, 0f);
             timeSinceLastShot = 0f;   
         }
 
-        if (!weaponSO.IsAutomatic) {
+        if (!CurrentWeaponSO.IsAutomatic) {
             starterAssetsInputs.ShootInput(false);
         }
     }
 
     void HandleZoom() {
-        if (!weaponSO.CanZoom) return;
+        if (!CurrentWeaponSO.CanZoom) return;
 
         if (starterAssetsInputs.zoom) {
-            playerFollowCamera.m_Lens.FieldOfView = weaponSO.ZoomAmount;
+            playerFollowCamera.m_Lens.FieldOfView = CurrentWeaponSO.ZoomAmount;
             zoomVignette.SetActive(true);
-            firstPersonController.ChangeRotationSpeed(weaponSO.ZoomRotationSpeed);
+            firstPersonController.ChangeRotationSpeed(CurrentWeaponSO.ZoomRotationSpeed);
         } else {
             playerFollowCamera.m_Lens.FieldOfView = defaultFOV;
             zoomVignette.SetActive(false);
@@ -75,7 +77,7 @@ public class ActiveWeapon : MonoBehaviour {
 
         Weapon newWeapon = Instantiate(weaponSO.weaponPrefab, transform).GetComponent<Weapon>();
         currentWeapon = newWeapon;
-        this.weaponSO = weaponSO;
+        this.CurrentWeaponSO = weaponSO;
 
     }
 }

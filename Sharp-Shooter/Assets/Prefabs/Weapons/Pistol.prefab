@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4353380315677849555}
   - component: {fileID: 3708766965283267468}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3037946687286732981}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9d91fae2703d43046a1c37804ae23dad, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -171,6 +171,14 @@ PrefabInstance:
     - target: {fileID: 2448905307963676178, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
       propertyPath: m_Name
       value: Muzzleflash
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448905307963676178, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010473239964018884, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3010473239964018884, guid: 9f301746c88e4434f9ec504a60d50673, type: 3}
       propertyPath: m_IsActive

@@ -1,25 +1,27 @@
 using UnityEngine;
 using StarterAssets;
 using Cinemachine;
+using TMPro;
 
 public class ActiveWeapon : MonoBehaviour {
 
     [SerializeField] WeaponSO startingWeapon;
-    [SerializeField] WeaponSO CurrentWeaponSO;
     [SerializeField] CinemachineVirtualCamera playerFollowCamera;
     [SerializeField] GameObject zoomVignette;
+    [SerializeField] TMP_Text ammoText;
 
+    WeaponSO CurrentWeaponSO;
+    Weapon currentWeapon;
     Animator animator;
     StarterAssetsInputs starterAssetsInputs;
     FirstPersonController firstPersonController;
-    Weapon currentWeapon;
+    
+    const string SHOOT_STRING = "Shoot";
 
     float timeSinceLastShot = 0f;
     float defaultFOV;
     float defaultRotationSpeed;
     int currentAmmo;
-
-    const string SHOOT_STRING = "Shoot";
 
     void Awake() { 
         starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
@@ -30,12 +32,22 @@ public class ActiveWeapon : MonoBehaviour {
     }
 
     void Start() {
-        currentWeapon = GetComponentInChildren<Weapon>();
+        SwitchWeapon(startingWeapon);
+        AdjustAmmo(CurrentWeaponSO.MagazineSize);
     }
 
     void Update() {
         HandleShoot();
         HandleZoom();
+    }
+
+    public void AdjustAmmo(int amount) {
+        currentAmmo += amount;
+
+        if (currentAmmo > CurrentWeaponSO.MagazineSize) {
+            currentAmmo = CurrentWeaponSO.MagazineSize;
+        }
+        ammoText.text = currentAmmo.ToString("D2"); //D@ = uses 2 digits always
     }
 
     private void HandleShoot() {
@@ -44,10 +56,11 @@ public class ActiveWeapon : MonoBehaviour {
         
         if (!starterAssetsInputs.shoot) return;
 
-        if (timeSinceLastShot >= CurrentWeaponSO.FireRate) {
+        if (timeSinceLastShot >= CurrentWeaponSO.FireRate && currentAmmo > 0) {
             currentWeapon.Shoot(CurrentWeaponSO);
             animator.Play(SHOOT_STRING, 0, 0f);
-            timeSinceLastShot = 0f;   
+            timeSinceLastShot = 0f;
+            AdjustAmmo(-1);
         }
 
         if (!CurrentWeaponSO.IsAutomatic) {
@@ -79,5 +92,6 @@ public class ActiveWeapon : MonoBehaviour {
         currentWeapon = newWeapon;
         this.CurrentWeaponSO = weaponSO;
 
+        AdjustAmmo(CurrentWeaponSO.MagazineSize);
     }
 }

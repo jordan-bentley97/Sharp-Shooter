@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour {
 
     [SerializeField] int startingHealth;
+    [SerializeField] GameObject robotExplosionVFX;
     int currentHealth;
 
     void Awake() {
@@ -18,6 +19,7 @@ public class EnemyHealth : MonoBehaviour {
     }
 
     void Death(){
+        Instantiate(robotExplosionVFX, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }

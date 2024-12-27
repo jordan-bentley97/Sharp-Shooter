@@ -14,11 +14,12 @@ public class EnemyHealth : MonoBehaviour {
         currentHealth -= amount;
 
         if (currentHealth <= 0){
-            Death();
+            SelfDestruct();
         }
     }
 
-    void Death(){
+
+    public void SelfDestruct() {
         Instantiate(robotExplosionVFX, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }

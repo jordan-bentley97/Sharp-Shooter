@@ -20,4 +20,4 @@ MonoBehaviour:
   CanZoom: 0
   ZoomAmount: 10
   ZoomRotationSpeed: 0.1
-  MagazineSize: 6
+  MagazineSize: 24

@@ -4841,6 +4841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1.5
+  damage: 5
 --- !u!1 &6798312471289710411
 GameObject:
   m_ObjectHideFlags: 0

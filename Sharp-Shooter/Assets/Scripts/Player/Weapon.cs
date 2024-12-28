@@ -23,8 +23,10 @@ public class Weapon : MonoBehaviour {
 
             Instantiate(weaponSO.HitVFXPrefab, hit.point, Quaternion.identity);
 
-            EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
+            EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>(); 
             enemyHealth?.takeDamage(weaponSO.Damage);
+            
+            //turret collider in on child GO and robot collider is on parent GO. GetComponentInParent searches its own components before checking parents.
         }
     }
 }

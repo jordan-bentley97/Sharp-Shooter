@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 706394735461636829}
   - component: {fileID: 439794529939863951}
   m_Layer: 0
-  m_Name: Robot Explosion VFX
+  m_Name: Explosion VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

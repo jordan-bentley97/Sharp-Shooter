@@ -4771,10 +4771,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2075578118}
     - target: {fileID: 1642698209542543769, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
-      propertyPath: startingWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 6b63c30eb62e36b4781f888d849f07d1, type: 2}
-    - target: {fileID: 1642698209542543769, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
       propertyPath: playerFollowCamera
       value: 
       objectReference: {fileID: 427229616}

@@ -26,7 +26,7 @@ public class Weapon : MonoBehaviour {
             EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>(); 
             enemyHealth?.takeDamage(weaponSO.Damage);
             
-            //turret collider in on child GO and robot collider is on parent GO. GetComponentInParent searches its own components before checking parents.
+            //turret collider is on child GO and robot collider is on parent GO. GetComponentInParent searches its own components before checking parents.
         }
     }
 }

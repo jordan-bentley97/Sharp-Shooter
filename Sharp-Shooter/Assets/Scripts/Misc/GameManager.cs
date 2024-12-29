@@ -1,15 +1,49 @@
+using StarterAssets;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    public bool isPaused;
+
     [SerializeField] TMP_Text enemiesRemainingText;
     [SerializeField] GameObject youWinText;
+    [SerializeField] GameObject pauseContainer;
 
+    StarterAssetsInputs starterAssetsInputs;
     int enemiesRemaining = 0;
 
-    const string ENEMIES_REMAINING_STRING = "Robots Remaining: ";
+    const string ENEMIES_REMAINING_STRING = "robots remaining: ";
+
+    void Awake() {
+        starterAssetsInputs = FindFirstObjectByType<StarterAssetsInputs>();
+    }
+
+    void Update() {
+        HandlePausing();
+    }
+
+    void HandlePausing() {
+        if (starterAssetsInputs.pause) {
+            Pause();
+            starterAssetsInputs.PauseInput(false);
+        }
+    }
+
+    void Pause() {
+        Time.timeScale = 0f;
+        pauseContainer.SetActive(true);
+        starterAssetsInputs.SetCursorState(false);
+        isPaused = true;
+    }
+
+    public void Unpause() {
+        Time.timeScale = 1f;
+        pauseContainer.SetActive(false);
+        starterAssetsInputs.SetCursorState(true);
+        isPaused = false;
+    }
 
     public void AdjustEnemiesRemaining(int amount) {
         enemiesRemaining += amount;
@@ -26,7 +60,6 @@ public class GameManager : MonoBehaviour {
     }
 
     public void QuitButton() {
-        Debug.LogWarning("Quitting doesnt work in the editor, silly goose!");
         Application.Quit();
     }
 }

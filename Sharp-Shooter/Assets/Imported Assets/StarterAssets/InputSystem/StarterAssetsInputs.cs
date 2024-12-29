@@ -14,6 +14,7 @@ namespace StarterAssets
 		public bool sprint;
 		public bool shoot;
         public bool zoom;
+        public bool pause;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -59,8 +60,13 @@ namespace StarterAssets
 		{
 			ZoomInput(value.isPressed);
 		}
-#endif
 
+        public void OnPause(InputValue value)
+        {
+            PauseInput(value.isPressed);
+        }
+
+#endif
 
 		public void MoveInput(Vector2 newMoveDirection)
 		{
@@ -91,6 +97,11 @@ namespace StarterAssets
 		{
 			zoom = newZoomState;
 		}
+
+        public void PauseInput(bool newPauseState) 
+        {
+            pause = newPauseState;
+        }
 		
 		private void OnApplicationFocus(bool hasFocus)
 		{

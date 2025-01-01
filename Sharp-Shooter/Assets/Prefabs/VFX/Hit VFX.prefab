@@ -3822,7 +3822,7 @@ ParticleSystem:
       emitProbability: 1
   LightsModule:
     enabled: 1
-    ratio: 0.1
+    ratio: 1
     light: {fileID: 8878841999161096537}
     randomDistribution: 1
     color: 1
@@ -3831,7 +3831,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 10
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4852,7 +4852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4195761074533075880
 Transform:
   m_ObjectHideFlags: 0
@@ -4879,7 +4879,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0.058823533, g: 1, b: 0, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

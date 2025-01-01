@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour {
     [SerializeField] int startingHealth;
     [SerializeField] CinemachineVirtualCamera deathVirtualCamera;
     [SerializeField] Transform weaponCamera;
+    [SerializeField] Transform UICamera;
     [SerializeField] Image[] shieldBars;
     [SerializeField] GameObject gameOverContainer; 
 
@@ -31,6 +32,7 @@ public class PlayerHealth : MonoBehaviour {
 
     void Death() {
         weaponCamera.parent = null;
+        UICamera.parent = null;
         deathVirtualCamera.Priority = gameOverVirtualCameraPriority;
         gameOverContainer.SetActive(true);
         StarterAssetsInputs starterAssetsInputs = FindFirstObjectByType<StarterAssetsInputs>();

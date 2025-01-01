@@ -9,6 +9,7 @@ public class Turret : MonoBehaviour {
     [SerializeField] Transform projectileSpawnPoint;
     [SerializeField] float fireRate;
     [SerializeField] int damage;
+    [SerializeField] ParticleSystem muzzleflash;
 
     PlayerHealth player;
 
@@ -33,6 +34,7 @@ public class Turret : MonoBehaviour {
             Projectile newProjectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity).GetComponent<Projectile>();
             newProjectile.transform.LookAt(playerTargetPoint);
             newProjectile.Init(damage);
+            muzzleflash.Play();
             audioSource.Play();
         }
     }

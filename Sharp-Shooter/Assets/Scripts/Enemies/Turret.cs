@@ -12,6 +12,12 @@ public class Turret : MonoBehaviour {
 
     PlayerHealth player;
 
+    AudioSource audioSource;
+
+    void Awake() {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Start() {
         player = FindFirstObjectByType<PlayerHealth>();
         StartCoroutine(FireRoutine());
@@ -27,6 +33,7 @@ public class Turret : MonoBehaviour {
             Projectile newProjectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity).GetComponent<Projectile>();
             newProjectile.transform.LookAt(playerTargetPoint);
             newProjectile.Init(damage);
+            audioSource.Play();
         }
     }
 }

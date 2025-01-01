@@ -4,13 +4,20 @@ public abstract class Pickup : MonoBehaviour {
 
     [SerializeField] float rotationSpeed = 100f;
 
+    AudioSource audioSource;
+
     const string PLAYER_STRING = "Player";
+
+    void Awake() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag(PLAYER_STRING)) {
             ActiveWeapon activeWeapon = other.GetComponentInChildren<ActiveWeapon>();
             OnPickup(activeWeapon);
-            Destroy(this.gameObject);
+            audioSource.Play();
+            Destroy(gameObject, audioSource.clip.length);
         }
     }
 

@@ -8,14 +8,18 @@ public class Weapon : MonoBehaviour {
 
     CinemachineImpulseSource impulseSource;
 
+    AudioSource audioSource;
+
     void Awake () {
         impulseSource = GetComponent<CinemachineImpulseSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Shoot(WeaponSO weaponSO) {
         
         muzzleFlash.Play();
         impulseSource.GenerateImpulse();
+        audioSource.Play();
         
         RaycastHit hit;
 

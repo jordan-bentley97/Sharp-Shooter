@@ -8,12 +8,14 @@ public class GameManager : MonoBehaviour {
     public bool isPaused;
 
     [SerializeField] TMP_Text enemiesRemainingText;
-    [SerializeField] GameObject youWinText;
+    [SerializeField] GameObject levelCompleteText;
     [SerializeField] GameObject pauseContainer;
     [SerializeField] GameObject optionsContainer;
+    [SerializeField] int nextLevelDelay;
 
     StarterAssetsInputs starterAssetsInputs;
     int enemiesRemaining = 0;
+    
 
     const string ENEMIES_REMAINING_STRING = "robots remaining: ";
 
@@ -60,10 +62,15 @@ public class GameManager : MonoBehaviour {
         enemiesRemaining += amount;
         enemiesRemainingText.text = ENEMIES_REMAINING_STRING + enemiesRemaining.ToString();
 
-        if (enemiesRemaining <= 0) {
-            youWinText.SetActive(true);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (enemiesRemaining <= 0)
+        {
+            levelCompleteText.SetActive(true);
+            Invoke("NextLevel", nextLevelDelay);
         }
+    }
+
+    void NextLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ResetLevelButton() {

@@ -21,14 +21,13 @@ public class EnemyHealth : MonoBehaviour {
         currentHealth -= amount;
 
         if (currentHealth <= 0){
-            gameManager.AdjustEnemiesRemaining(-1);
             SelfDestruct();
         }
     }
 
-
     public void SelfDestruct() {
         Instantiate(explosionVFX, transform.position, Quaternion.identity);
+        gameManager.AdjustEnemiesRemaining(-1);
         Destroy(this.gameObject);
     }
 }

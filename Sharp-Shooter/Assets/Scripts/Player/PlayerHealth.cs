@@ -11,19 +11,22 @@ public class PlayerHealth : MonoBehaviour {
     [SerializeField] Transform weaponCamera;
     [SerializeField] Transform UICamera;
     [SerializeField] Image[] shieldBars;
-    [SerializeField] GameObject gameOverContainer; 
+    [SerializeField] GameObject gameOverContainer;
 
     int currentHealth;
     int gameOverVirtualCameraPriority = 20;
+    AudioSource[] audioSources;
 
     void Awake() {
         currentHealth = startingHealth;
         AdjustShieldUI();
+        audioSources = GetComponents<AudioSource>();
     }
 
     public void TakeDamage(int amount){
         currentHealth -= amount;
         AdjustShieldUI();
+        audioSources[1].Play();
 
         if (currentHealth <= 0) {
             Death();

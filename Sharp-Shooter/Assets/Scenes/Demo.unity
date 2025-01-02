@@ -4967,6 +4967,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2798981732365407533}
+    - target: {fileID: 964089925062792687, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
+      propertyPath: m_MaxValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964089925062792687, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
+      propertyPath: m_MinValue
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 964089925062792687, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964089925062792687, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSFXVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 1408068344821212913, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
       propertyPath: m_Name
       value: Overlay Canvas
@@ -5107,14 +5123,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2798981732365407533}
-    - target: {fileID: 4475058695230724293, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
-      propertyPath: m_Name
-      value: Level Complete Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475058695230724293, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6304686128902398396, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5223,13 +5231,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2798981732365407533}
-    - target: {fileID: 7142887485304023483, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
-      propertyPath: m_text
-      value: level Complete!
+    - target: {fileID: 7417909231879204576, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
+      propertyPath: m_Value
+      value: -5
       objectReference: {fileID: 0}
-    - target: {fileID: 7142887485304023483, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
+    - target: {fileID: 7417909231879204576, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
+      propertyPath: m_MaxValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7417909231879204576, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
+      propertyPath: m_MinValue
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7417909231879204576, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7694487786516321982, guid: 5ac7dbe09f8e0bd448354e6ec640d841, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5329,7 +5345,7 @@ AudioSource:
   m_GameObject: {fileID: 1169991188}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 29ba3d6af8781e44c8b505d1241efc42, type: 2}
+  OutputAudioMixerGroup: {fileID: -4865447007809492068, guid: 0f88d78bd7a877b4a8d11a51ddd879b5, type: 2}
   m_audioClip: {fileID: 8300000, guid: 7ade5eff4f2bcd8458c651f7e2621e86, type: 3}
   m_Resource: {fileID: 8300000, guid: 7ade5eff4f2bcd8458c651f7e2621e86, type: 3}
   m_PlayOnAwake: 1

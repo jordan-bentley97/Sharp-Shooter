@@ -13,6 +13,8 @@ namespace StarterAssets
 	{
         [SerializeField] GameManager gameManager;
 
+        AudioSource[] audioSources;
+
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
@@ -95,6 +97,9 @@ namespace StarterAssets
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
+
+            audioSources = GetComponents<AudioSource>();
+
 		}
 
 		private void Start()
@@ -222,6 +227,7 @@ namespace StarterAssets
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+                    audioSources[0].Play();
 				}
 
 				// jump timeout

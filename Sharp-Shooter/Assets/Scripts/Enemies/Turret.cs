@@ -10,6 +10,7 @@ public class Turret : MonoBehaviour {
     [SerializeField] float fireRate;
     [SerializeField] int damage;
     [SerializeField] ParticleSystem muzzleflash;
+    [SerializeField] float rotationSpeed = 2.0f;
 
     PlayerHealth player;
 
@@ -25,7 +26,12 @@ public class Turret : MonoBehaviour {
     }
 
     void Update() {
-        turretHead.LookAt(playerTargetPoint);
+        if (player) {
+            Vector3 directionToPlayer = playerTargetPoint.position - turretHead.position;
+            Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
+            turretHead.rotation = Quaternion.Lerp(turretHead.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            //turretHead.LookAt(playerTargetPoint); <- old method, rotates turret model too fast and player never sees it
+        }
     }
 
     IEnumerator FireRoutine() {

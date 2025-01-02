@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] TMP_Text enemiesRemainingText;
     [SerializeField] GameObject youWinText;
     [SerializeField] GameObject pauseContainer;
+    [SerializeField] GameObject optionsContainer;
 
     StarterAssetsInputs starterAssetsInputs;
     int enemiesRemaining = 0;
@@ -25,10 +26,20 @@ public class GameManager : MonoBehaviour {
     }
 
     void HandlePausing() {
-        if (starterAssetsInputs.pause) {
+        if (starterAssetsInputs.pause && !isPaused) {
             Pause();
             starterAssetsInputs.PauseInput(false);
         }
+    }
+
+    public void Back() {
+        optionsContainer.SetActive(false);
+        pauseContainer.SetActive(true);
+    }
+
+    public void Options() {
+        pauseContainer.SetActive(false);
+        optionsContainer.SetActive(true);
     }
 
     void Pause() {
@@ -51,6 +62,7 @@ public class GameManager : MonoBehaviour {
 
         if (enemiesRemaining <= 0) {
             youWinText.SetActive(true);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

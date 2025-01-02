@@ -5202,7 +5202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7ccb8156036dd44af49297d4749dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 5
+  spawnTime: 10
   spawnPoint: {fileID: 7558576230979244607}
   robotPrefab: {fileID: 2348695849173419999, guid: 8445eaf0c5162fe4bba1b63b16b8e5be, type: 3}
   spawnGateVFX: {fileID: 795556477115586374}

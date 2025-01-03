@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour {
 
     StarterAssetsInputs starterAssetsInputs;
     int enemiesRemaining = 0;
-    
 
     const string ENEMIES_REMAINING_STRING = "robots remaining: ";
 
@@ -28,6 +27,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void HandlePausing() {
+        if (!starterAssetsInputs) return;
         if (starterAssetsInputs.pause && !isPaused) {
             Pause();
             starterAssetsInputs.PauseInput(false);
@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void QuitButton() {
+        Debug.Log("Cannot quit in the editor but good try");
         Application.Quit();
     }
 }

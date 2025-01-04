@@ -5,6 +5,7 @@ public class Weapon : MonoBehaviour {
 
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] LayerMask interactionLayers;
+    [SerializeField] ParticleSystem bulletHole;
 
     CinemachineImpulseSource impulseSource;
 
@@ -25,12 +26,19 @@ public class Weapon : MonoBehaviour {
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, interactionLayers, QueryTriggerInteraction.Ignore)) {
 
-            Instantiate(weaponSO.HitVFXPrefab, hit.point, Quaternion.identity);
+            Quaternion normalizedRotation = Quaternion.LookRotation(hit.normal);
+            Instantiate(weaponSO.HitVFXPrefab, hit.point, normalizedRotation);
 
-            EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>(); 
+            EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>(); //turret collider is on child GO and robot collider is on parent GO. GetComponentInParent searches its own components before checking parents.
             enemyHealth?.TakeDamage(weaponSO.Damage);
+
+            Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting of particle and surface textures appearing at same depth
+
+            if (!enemyHealth) {
+                Instantiate(bulletHole, offsetPosition, normalizedRotation);
+            }
             
-            //turret collider is on child GO and robot collider is on parent GO. GetComponentInParent searches its own components before checking parents.
+            
         }
     }
 }

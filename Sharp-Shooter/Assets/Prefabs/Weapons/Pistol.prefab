@@ -52,6 +52,7 @@ MonoBehaviour:
   interactionLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+  bulletHole: {fileID: 1014317291069184551, guid: ec4393b4a7e4dec4dba63b0a7987fa17, type: 3}
 --- !u!114 &1862219190413669319
 MonoBehaviour:
   m_ObjectHideFlags: 0

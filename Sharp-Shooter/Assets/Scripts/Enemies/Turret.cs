@@ -30,7 +30,6 @@ public class Turret : MonoBehaviour {
             Vector3 directionToPlayer = playerTargetPoint.position - turretHead.position;
             Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
             turretHead.rotation = Quaternion.Lerp(turretHead.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-            //turretHead.LookAt(playerTargetPoint); <- old method, rotates turret model too fast and player never sees it
         }
     }
 

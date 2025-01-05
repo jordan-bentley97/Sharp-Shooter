@@ -6,7 +6,7 @@ public class SpawnGate : MonoBehaviour {
 
     [SerializeField] int spawnTime;
     [SerializeField] Transform spawnPoint;
-    [SerializeField] GameObject robotPrefab;
+    [SerializeField] GameObject[] enemyPrefabs;
     [SerializeField] ParticleSystem spawnGateVFX;
 
     PlayerHealth player;
@@ -14,14 +14,13 @@ public class SpawnGate : MonoBehaviour {
     void Start() {
         player = FindFirstObjectByType<PlayerHealth>();
         if (FindAnyObjectByType<FirstPersonController>()) {
-           StartCoroutine("SpawnRoutine");
+           StartCoroutine(SpawnRoutine());
         }
     }
 
     IEnumerator SpawnRoutine() {
-
         while (player) {
-            Instantiate(robotPrefab, spawnPoint.position, Quaternion.identity);
+            Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Length)], spawnPoint.position, Quaternion.identity);
             spawnGateVFX.Play();
             yield return new WaitForSeconds(spawnTime);
         }

@@ -5148,7 +5148,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6245275288885605391}
   - {fileID: 9014101662772759939}
@@ -5204,7 +5204,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 10
   spawnPoint: {fileID: 7558576230979244607}
-  robotPrefab: {fileID: 2348695849173419999, guid: 8445eaf0c5162fe4bba1b63b16b8e5be, type: 3}
+  enemyPrefabs:
+  - {fileID: 2348695849173419999, guid: 8445eaf0c5162fe4bba1b63b16b8e5be, type: 3}
+  - {fileID: 7743315328739873670, guid: f360a656e7f6a3e47b24277ba91c46a3, type: 3}
   spawnGateVFX: {fileID: 795556477115586374}
 --- !u!1001 &6045640403467544259
 PrefabInstance:

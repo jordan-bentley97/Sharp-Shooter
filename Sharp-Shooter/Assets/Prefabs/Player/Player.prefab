@@ -78,8 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ea129959e55744b96624345802e12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swayMultiplier: 3
-  swaySmoothing: 1.5
+  swayMultiplier: 7
+  swaySmoothing: 2
 --- !u!1 &4396783906645054535
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +327,6 @@ MonoBehaviour:
   startingHealth: 10
   deathVirtualCamera: {fileID: 0}
   weaponCamera: {fileID: 483385923851634019}
-  UICamera: {fileID: 0}
   shieldBars:
   - {fileID: 0}
   - {fileID: 0}
@@ -737,9 +736,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42fe004338fb8e468766a2fc8b02fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingBobbingSpeed: 14
-  runningBobbingSpeed: 22
-  bobbingAmount: 0.05
+  walkingBobbingSpeed: 12
+  runningBobbingSpeed: 20
+  bobbingAmount: 0.06
 --- !u!1 &9069630047242149687
 GameObject:
   m_ObjectHideFlags: 0

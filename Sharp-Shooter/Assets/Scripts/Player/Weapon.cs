@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
-    [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] ParticleSystem muzzleFlashVFX;
     [SerializeField] LayerMask interactionLayers;
-    [SerializeField] ParticleSystem bulletHole;
+    [SerializeField] ParticleSystem bulletHoleVFX;
+    [SerializeField] ParticleSystem damageVFX;
 
     CinemachineImpulseSource impulseSource;
 
@@ -18,7 +19,7 @@ public class Weapon : MonoBehaviour {
 
     public void Shoot(WeaponSO weaponSO) {
         
-        muzzleFlash.Play();
+        muzzleFlashVFX.Play();
         impulseSource.GenerateImpulse();
         audioSource.Play();
         
@@ -32,13 +33,12 @@ public class Weapon : MonoBehaviour {
             EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>(); //turret collider is on child GO and robot collider is on parent GO. GetComponentInParent searches its own components before checking parents.
             enemyHealth?.TakeDamage(weaponSO.Damage);
 
-            Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting of particle and surface textures appearing at same depth
-
-            if (!enemyHealth) {
-                Instantiate(bulletHole, offsetPosition, normalizedRotation);
+            if (enemyHealth) {
+                Instantiate(damageVFX, hit.point, normalizedRotation);
+            } else {
+                Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting of particle and surface texture appearing at same depth
+                Instantiate(bulletHoleVFX, offsetPosition, normalizedRotation);
             }
-            
-            
         }
     }
 }

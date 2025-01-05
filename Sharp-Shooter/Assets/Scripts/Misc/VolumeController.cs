@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class VolumeController : MonoBehaviour
-{
+public class VolumeController : MonoBehaviour {
     [SerializeField] AudioMixer masterMixer;
 
     public void SetMusicVolume(float soundLevel) {

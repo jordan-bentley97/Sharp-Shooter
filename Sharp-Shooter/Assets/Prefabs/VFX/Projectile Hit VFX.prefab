@@ -3885,7 +3885,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4849,7 +4849,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 8bf2439ce5533df4093bf2edcec43aef, type: 3}
   m_Resource: {fileID: 8300000, guid: 8bf2439ce5533df4093bf2edcec43aef, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4950,7 +4950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4195761074533075880
 Transform:
   m_ObjectHideFlags: 0
@@ -5022,7 +5022,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.591e-41, y: 3.4623305e-38, z: 2.71068e-20, w: 5.51118e-40}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0

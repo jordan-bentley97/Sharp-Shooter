@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         Instantiate(projectileVFX, transform.position, Quaternion.identity);
-        PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+        PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
         playerHealth?.TakeDamage(damage);
         Destroy(this.gameObject);
     }

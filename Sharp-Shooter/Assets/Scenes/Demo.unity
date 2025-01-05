@@ -508,6 +508,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1169991189}
+  - {fileID: 653205049}
   - {fileID: 1506222833}
   - {fileID: 264791149}
   - {fileID: 53077539}
@@ -2904,6 +2905,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6117446269202415075, guid: 0ee074fde6f575a4da13007d2db65f2d, type: 3}
   m_PrefabInstance: {fileID: 930868038661945264}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &653205048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 653205049}
+  - component: {fileID: 653205050}
+  m_Layer: 0
+  m_Name: Reverb Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &653205049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653205048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 8.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 295632445}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!167 &653205050
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653205048}
+  m_Enabled: 1
+  m_MinDistance: 0
+  m_MaxDistance: 50
+  m_ReverbPreset: 9
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 2.91
+  m_DecayHFRatio: 1.3
+  m_Reflections: -602
+  m_ReflectionsDelay: 0.015
+  m_Reverb: -302
+  m_ReverbDelay: 0.022
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
 --- !u!1001 &681030122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4607,6 +4664,10 @@ PrefabInstance:
       propertyPath: playerFollowCamera
       value: 
       objectReference: {fileID: 427229616}
+    - target: {fileID: 4194485622297175691, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4396783906645054535, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -16424,6 +16485,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 441843074}
     m_Modifications:
     - target: {fileID: 2955688087778970624, guid: d1953b6c53edd424393615563af53d8a, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955688087778970624, guid: d1953b6c53edd424393615563af53d8a, type: 3}
       propertyPath: playerTargetPoint
       value: 
       objectReference: {fileID: 1420479958}
@@ -16852,6 +16917,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3349196910992453090, guid: 5d67fe1cf03138045bbb04ca6d851750, type: 3}
+      propertyPath: nextLevelDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349196910992453090, guid: 5d67fe1cf03138045bbb04ca6d851750, type: 3}
       propertyPath: pauseContainer
       value: 
       objectReference: {fileID: 73822217}
@@ -16869,15 +16938,15 @@ PrefabInstance:
       objectReference: {fileID: 949096093}
     - target: {fileID: 8364543376696172153, guid: 5d67fe1cf03138045bbb04ca6d851750, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.779837
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8364543376696172153, guid: 5d67fe1cf03138045bbb04ca6d851750, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.6490264
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8364543376696172153, guid: 5d67fe1cf03138045bbb04ca6d851750, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.965849
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8364543376696172153, guid: 5d67fe1cf03138045bbb04ca6d851750, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17051,7 +17120,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 732814091}
   - {fileID: 295632445}
-  - {fileID: 1158601880}
   - {fileID: 441843074}
   - {fileID: 360527208405112300}
   - {fileID: 1065335375}
+  - {fileID: 1158601880}

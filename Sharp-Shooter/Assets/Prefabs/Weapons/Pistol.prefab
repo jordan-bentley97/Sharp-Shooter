@@ -48,11 +48,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3052c4d1b1ea9469d06fb3f0a9fcf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muzzleFlash: {fileID: 7893315032382474162}
+  muzzleFlashVFX: {fileID: 7893315032382474162}
   interactionLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  bulletHole: {fileID: 1014317291069184551, guid: ec4393b4a7e4dec4dba63b0a7987fa17, type: 3}
+  bulletHoleVFX: {fileID: 1014317291069184551, guid: ec4393b4a7e4dec4dba63b0a7987fa17, type: 3}
+  damageVFX: {fileID: 3992680208463820010, guid: 2e46ae9ab07748d439b78695d9c1acfd, type: 3}
 --- !u!114 &1862219190413669319
 MonoBehaviour:
   m_ObjectHideFlags: 0

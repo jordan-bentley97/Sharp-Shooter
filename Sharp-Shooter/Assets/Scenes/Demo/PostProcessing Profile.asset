@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.5
   scatter:
     m_OverrideState: 1
     m_Value: 0.5
@@ -165,7 +165,7 @@ MonoBehaviour:
     m_Value: 0.5
   contrast:
     m_OverrideState: 1
-    m_Value: 35
+    m_Value: 60
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -174,7 +174,7 @@ MonoBehaviour:
     m_Value: -180
   saturation:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 45
 --- !u!114 &8875707708878854701
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -190,7 +190,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.6
   tintColor:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -219,17 +219,17 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   startingPosition:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   scale:
     m_OverrideState: 0
     m_Value: 4
   streaksIntensity:
     m_OverrideState: 1
-    m_Value: 1
-  streaksLength:
-    m_OverrideState: 1
     m_Value: 0.5
+  streaksLength:
+    m_OverrideState: 0
+    m_Value: 0.35
   streaksOrientation:
     m_OverrideState: 0
     m_Value: 0

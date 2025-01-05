@@ -29,6 +29,16 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
+    public void GetHealth(int amount) {
+        currentHealth += amount;
+
+        if (currentHealth > startingHealth) {
+            currentHealth = startingHealth;
+        }
+        
+        AdjustShieldUI();
+    }
+
     void Death() {
         weaponCamera.parent = null;
         deathVirtualCamera.Priority = gameOverVirtualCameraPriority;

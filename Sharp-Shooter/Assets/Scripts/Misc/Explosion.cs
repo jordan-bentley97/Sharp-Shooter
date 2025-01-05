@@ -25,7 +25,7 @@ public class Explosion : MonoBehaviour {
 
             playerHealth.TakeDamage(damage);
 
-            break; //exits out of for loop entirely
+            break; //exits the for loop entirely
         }
     }
 }

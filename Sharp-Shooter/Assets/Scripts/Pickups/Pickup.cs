@@ -14,6 +14,9 @@ public abstract class Pickup : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag(PLAYER_STRING)) {
+            
+            this.GetComponent<Collider>().enabled = false;
+
             ActiveWeapon activeWeapon = other.GetComponentInChildren<ActiveWeapon>();
             OnPickup(activeWeapon);
             audioSource.Play();

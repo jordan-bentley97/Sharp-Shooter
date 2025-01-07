@@ -49,4 +49,4 @@ MonoBehaviour:
   levelCompleteText: {fileID: 0}
   pauseContainer: {fileID: 0}
   optionsContainer: {fileID: 0}
-  nextLevelDelay: 3
+  nextLevelDelay: 5

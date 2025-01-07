@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8150498861483655577}
   - component: {fileID: 1079830066041162544}
   - component: {fileID: 4808052878476839449}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Death Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -23,6 +23,12 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
+        GameManager gameManager;
+
+        void Awake() {
+            gameManager = FindFirstObjectByType<GameManager>();
+        }
+
         void Start() {
             SetCursorState(true);
         }
@@ -105,6 +111,7 @@ namespace StarterAssets
 		
 		private void OnApplicationFocus(bool hasFocus)
 		{
+            if (gameManager.isPaused) return; //keeps cursor unlocked in pause menu if window focus is lost
 			SetCursorState(cursorLocked);
 		}
 

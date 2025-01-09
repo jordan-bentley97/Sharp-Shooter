@@ -12,9 +12,10 @@ public class EnemyHealth : MonoBehaviour {
         currentHealth = startingHealth;
     }
 
-    void Start() { // will run when an enemy is instanced
+    void Start() { 
         gameManager = FindFirstObjectByType<GameManager>();
         gameManager.AdjustEnemiesRemaining(1); 
+        // will run when an enemy is instanced
     }
 
     public void TakeDamage(int amount){

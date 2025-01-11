@@ -130,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: c9787801ee2d5ef43b84b449f6a96159, type: 3}
     - target: {fileID: 8458405708649295393, guid: 8445eaf0c5162fe4bba1b63b16b8e5be, type: 3}
       propertyPath: m_Speed
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8458405708649295393, guid: 8445eaf0c5162fe4bba1b63b16b8e5be, type: 3}
       propertyPath: m_Height

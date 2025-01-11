@@ -159,10 +159,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   MoveSpeed: 8
-  SprintSpeed: 12
+  SprintSpeed: 10
   RotationSpeed: 1
   SpeedChangeRate: 10
-  JumpHeight: 2
+  JumpHeight: 1.5
   Gravity: -12
   JumpTimeout: 0
   FallTimeout: 0

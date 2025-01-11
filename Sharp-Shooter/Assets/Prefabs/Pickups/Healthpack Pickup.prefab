@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 355923702986758200}
   - component: {fileID: 7728581246460252415}
   - component: {fileID: 2450221365771802681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Healthpack Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6761935315162317956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,6 +276,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b15c0e0d3b37daa498780fc5ec681288, type: 3}
       propertyPath: m_Name
       value: Health Pack
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b15c0e0d3b37daa498780fc5ec681288, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

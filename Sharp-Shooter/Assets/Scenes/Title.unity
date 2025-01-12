@@ -1098,8 +1098,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ebc95abeb56fe8d41b51ad2f874253b7, type: 2}
-  m_sharedMaterial: {fileID: -5708261482999481688, guid: ebc95abeb56fe8d41b51ad2f874253b7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 25f23b5ac06598b41b3680d94913f63e, type: 2}
+  m_sharedMaterial: {fileID: -5708261482999481688, guid: 25f23b5ac06598b41b3680d94913f63e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5883,10 +5883,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.4641509, g: 0.4641509, b: 0.4641509, a: 1}
+    m_HighlightedColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 0.39215687}
     m_PressedColor: {r: 0.032367468, g: 1, b: 0, a: 1}
-    m_SelectedColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
+    m_SelectedColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 0.39215687}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:

@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thanks for playing the demo, stay tuned for the full game.
+  m_text: :)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebc95abeb56fe8d41b51ad2f874253b7, type: 2}
   m_sharedMaterial: {fileID: -5708261482999481688, guid: ebc95abeb56fe8d41b51ad2f874253b7, type: 2}
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.058644146, g: 0.6528301, b: 0, a: 1}
+  m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The robot invasion was stopped!
+  m_text: Thanks for playing!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebc95abeb56fe8d41b51ad2f874253b7, type: 2}
   m_sharedMaterial: {fileID: -5708261482999481688, guid: ebc95abeb56fe8d41b51ad2f874253b7, type: 2}

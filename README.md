@@ -1,4 +1,4 @@
-Sharp-Shooter is a FPS game made in Unity following [this course](https://www.udemy.com/course/unitycourse2/) with lots of extra features and polish I added.
+Sharp-Shooter is a FPS game made in Unity following [this course](https://www.udemy.com/course/unitycourse2/) with extra levels, enemies and polish added by me! 
 
 Credits
  - [Starter Assets - FirstPerson Controller](https://assetstore.unity.com/packages/essentials/starter-assets-firstperson-updates-in-new-charactercontroller-pa-196525)

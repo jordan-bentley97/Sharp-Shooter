@@ -738,7 +738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkingBobbingSpeed: 12
   runningBobbingSpeed: 20
-  bobbingAmount: 0.06
+  bobbingAmount: 0.07
 --- !u!1 &9069630047242149687
 GameObject:
   m_ObjectHideFlags: 0

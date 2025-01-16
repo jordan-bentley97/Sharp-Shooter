@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField] TMP_Text enemiesRemainingText;
     [SerializeField] GameObject levelCompleteText;
     [SerializeField] GameObject pauseContainer;
+    [SerializeField] GameObject menuContainer;
     [SerializeField] GameObject optionsContainer;
+    [SerializeField] GameObject controlsContainer;
     [SerializeField] int nextLevelDelay;
 
     StarterAssetsInputs starterAssetsInputs;
@@ -42,6 +44,16 @@ public class GameManager : MonoBehaviour {
     public void Options() {
         pauseContainer.SetActive(false);
         optionsContainer.SetActive(true);
+    }
+
+    public void MenuBack() {
+        controlsContainer.SetActive(false);
+        menuContainer.SetActive(true);
+    }
+
+    public void Controls() {
+        menuContainer.SetActive(false);
+        controlsContainer.SetActive(true);
     }
 
     void Pause() {

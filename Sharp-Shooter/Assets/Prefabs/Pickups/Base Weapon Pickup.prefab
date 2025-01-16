@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5028059150750843264}
   m_Layer: 8
   m_Name: Base Weapon Pickup
-  m_TagString: Untagged
+  m_TagString: Pickups
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

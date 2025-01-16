@@ -32,9 +32,10 @@ public class Weapon : MonoBehaviour {
             EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>(); //turret collider is on child GO and robot collider is on parent GO. GetComponentInParent searches its own components before checking parents.
             enemyHealth?.TakeDamage(weaponSO.Damage);
 
-            Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting of particle and surface texture appearing at same depth
-            Instantiate(bulletHoleVFX, offsetPosition, normalizedRotation);
-
+            if (!enemyHealth) {
+                Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting of particle and surface texture appearing at same depth
+                Instantiate(bulletHoleVFX, offsetPosition, normalizedRotation);
+            }
         }
     }
 }

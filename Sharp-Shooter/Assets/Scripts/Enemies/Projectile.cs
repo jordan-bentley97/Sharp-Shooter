@@ -5,6 +5,8 @@ public class Projectile : MonoBehaviour {
     [SerializeField] float speed;
     [SerializeField] GameObject projectileVFX;
 
+    const string PICKUPS_TAG = "Pickups";
+
     int damage;
     Rigidbody rb;
 
@@ -21,9 +23,11 @@ public class Projectile : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
-        Instantiate(projectileVFX, transform.position, Quaternion.identity);
-        PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
-        playerHealth?.TakeDamage(damage);
-        Destroy(this.gameObject);
+        if (!other.CompareTag(PICKUPS_TAG)) {
+            Instantiate(projectileVFX, transform.position, Quaternion.identity);
+            PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
+            playerHealth?.TakeDamage(damage);
+            Destroy(this.gameObject);
+        }
     }
 }

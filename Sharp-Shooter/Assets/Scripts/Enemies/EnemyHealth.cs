@@ -2,24 +2,32 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour {
 
-    [SerializeField] int startingHealth;
+    [SerializeField] public int startingHealth;
     [SerializeField] GameObject explosionVFX;
+    [SerializeField] bool hasHealthBar;
 
     GameManager gameManager;
     int currentHealth;
-
+    Healthbar healthbar;
+    
     void Awake() {
         currentHealth = startingHealth;
+        if (hasHealthBar) {
+            healthbar = GetComponentInChildren<Healthbar>();
+        }
     }
 
     void Start() { 
         gameManager = FindFirstObjectByType<GameManager>();
-        gameManager.AdjustEnemiesRemaining(1); 
-        // will run when an enemy is instanced
+        gameManager.AdjustEnemiesRemaining(1);
     }
 
     public void TakeDamage(int amount){
         currentHealth -= amount;
+
+        if (hasHealthBar) {
+            healthbar.SetHealth(currentHealth);
+        }
 
         if (currentHealth <= 0){
             SelfDestruct();

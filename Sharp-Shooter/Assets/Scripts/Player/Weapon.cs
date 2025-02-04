@@ -33,7 +33,7 @@ public class Weapon : MonoBehaviour {
             enemyHealth?.TakeDamage(weaponSO.Damage);
 
             if (!enemyHealth) {
-                Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting of particle and surface texture appearing at same depth
+                Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting due to bullethole particle and surface texture appearing at same depth
                 Instantiate(bulletHoleVFX, offsetPosition, normalizedRotation);
             }
         }

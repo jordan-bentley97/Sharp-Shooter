@@ -31,14 +31,13 @@ public class CameraTilt : MonoBehaviour {
 
         if (isMoving) {
             // Calculate tilt angles based on the local movement direction
-            //float targetTiltX = localMovementDirection.z * tiltAngle; // Forward/Backward tilt (Z-axis)
-            float targetTiltZ = -localMovementDirection.x * tiltAngle;  // Side-to-side tilt (X-axis)
+            //float targetTiltX = localMovementDirection.z * tiltAngle; // Forward/Backward tilt (Z-axis) (not good for FPS aiming)
+            float targetTiltZ = -localMovementDirection.x * tiltAngle;  // Side-to-side tilt (X-axis) (messed up aim if you strafe and shoot while the camera is tilting)
 
             // Create the target rotation based on the tilt angles
             targetRotation = Quaternion.Euler(0, 0, targetTiltZ);
         }
-        else
-        {
+        else {
             // If the player is not moving, return the camera to its original rotation
             targetRotation = Quaternion.identity;
         }

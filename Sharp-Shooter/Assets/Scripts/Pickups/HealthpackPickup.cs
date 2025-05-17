@@ -23,11 +23,12 @@ public class HealthpackPickup : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         if(other.CompareTag(PLAYER_STRING)) {
-            this.GetComponent<Collider>().enabled = false;
-            playerHealth.GetHealth(amount);
-            audioSource.Play();
-            Destroy(gameObject, audioSource.clip.length);
+            if (playerHealth.currentHealth != playerHealth.startingHealth) {
+                this.GetComponent<Collider>().enabled = false;
+                playerHealth.GetHealth(amount);
+                audioSource.Play();
+                Destroy(gameObject, audioSource.clip.length);
+            }
         }
     }
-
 }

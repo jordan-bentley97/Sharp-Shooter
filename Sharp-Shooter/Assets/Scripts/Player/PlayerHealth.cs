@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour {
 
     [Range(1, 10)]
-    [SerializeField] int startingHealth;
+    [SerializeField] public int startingHealth;
     [SerializeField] CinemachineVirtualCamera deathVirtualCamera;
     [SerializeField] Transform weaponCamera;
     [SerializeField] Image[] shieldBars;
     [SerializeField] GameObject gameOverContainer;
 
-    int currentHealth;
+    public int currentHealth;
     int gameOverVirtualCameraPriority = 20;
 
     void Awake() {

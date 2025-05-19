@@ -227,6 +227,7 @@ namespace StarterAssets
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+					audioSources[0].pitch = Random.Range(0.8f, 1.2f);
                     audioSources[0].Play();
 				}
 

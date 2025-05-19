@@ -5461,12 +5461,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7ccb8156036dd44af49297d4749dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 10
+  spawnTime: 15
   spawnPoint: {fileID: 7558576230979244607}
   enemyPrefabs:
   - {fileID: 2348695849173419999, guid: 8445eaf0c5162fe4bba1b63b16b8e5be, type: 3}
-  - {fileID: 7743315328739873670, guid: f360a656e7f6a3e47b24277ba91c46a3, type: 3}
-  - {fileID: 6048732512177354276, guid: 110d96c8fde391540b8f238458a45a2c, type: 3}
   spawnGateVFX: {fileID: 795556477115586374}
 --- !u!1001 &6045640403467544259
 PrefabInstance:

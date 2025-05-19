@@ -5189,7 +5189,7 @@ GameObject:
   - component: {fileID: -3028506079692254195}
   m_Layer: 6
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5224,6 +5224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 15
   explosionVFX: {fileID: 482406643162879726, guid: 2a789e7270d39f042b71fccbdc2e1558, type: 3}
+  hasHealthBar: 0
 --- !u!114 &2955688087778970624
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,16 +15,24 @@ public class PlayerHealth : MonoBehaviour {
     public int currentHealth;
     int gameOverVirtualCameraPriority = 20;
 
-    void Awake() {
+    AudioSource[] audioSources;
+
+
+    void Awake()
+    {
         currentHealth = startingHealth;
         AdjustShieldUI();
+        audioSources = GetComponents<AudioSource>();
     }
 
     public void TakeDamage(int amount){
         currentHealth -= amount;
         AdjustShieldUI();
+        audioSources[1].pitch = Random.Range(0.8f, 1.2f);
+        audioSources[1].Play();
 
-        if (currentHealth <= 0) {
+        if (currentHealth <= 0)
+        {
             Death();
         }
     }

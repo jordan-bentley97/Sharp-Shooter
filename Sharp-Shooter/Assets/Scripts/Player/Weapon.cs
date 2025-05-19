@@ -20,6 +20,7 @@ public class Weapon : MonoBehaviour {
         
         muzzleFlashVFX.Play();
         impulseSource.GenerateImpulse();
+        audioSource.pitch = Random.Range(0.7f, 1.3f);
         audioSource.Play();
         
         RaycastHit hit;
@@ -31,9 +32,15 @@ public class Weapon : MonoBehaviour {
 
             EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>(); //turret collider is on child GO and robot collider is on parent GO. GetComponentInParent searches its own components before checking parents.
             enemyHealth?.TakeDamage(weaponSO.Damage);
+            //Debug.Log("Enemy hit");
 
-            if (!enemyHealth) {
-                Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting due to bullethole particle and surface texture appearing at same depth
+            DestroyableObject destroyableObject = hit.collider.gameObject.GetComponent<DestroyableObject>();
+            destroyableObject?.ReceiveDamage(weaponSO.Damage);
+            //Debug.Log("Destroyable Object hit");
+            
+
+            if (!enemyHealth && !destroyableObject) {
+                Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting
                 Instantiate(bulletHoleVFX, offsetPosition, normalizedRotation);
             }
         }

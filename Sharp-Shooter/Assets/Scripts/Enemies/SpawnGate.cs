@@ -10,6 +10,11 @@ public class SpawnGate : MonoBehaviour {
     [SerializeField] ParticleSystem spawnGateVFX;
 
     PlayerHealth player;
+    AudioSource audiosource;
+
+    void Awake(){
+        audiosource = GetComponent<AudioSource>();
+    }
 
     void Start() {
         player = FindFirstObjectByType<PlayerHealth>();
@@ -22,6 +27,7 @@ public class SpawnGate : MonoBehaviour {
         while (player) {
             Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Length)], spawnPoint.position, Quaternion.identity);
             spawnGateVFX.Play();
+            audiosource.Play();
             yield return new WaitForSeconds(spawnTime);
         }
     }

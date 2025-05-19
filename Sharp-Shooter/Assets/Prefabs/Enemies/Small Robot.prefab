@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
-  explosionVFX: {fileID: 482406643162879726, guid: 4191fbb341f70144a88fa904ead26e52, type: 3}
+  explosionVFX: {fileID: 482406643162879726, guid: 2a789e7270d39f042b71fccbdc2e1558, type: 3}
   hasHealthBar: 0
 --- !u!95 &737529881445074937
 Animator:

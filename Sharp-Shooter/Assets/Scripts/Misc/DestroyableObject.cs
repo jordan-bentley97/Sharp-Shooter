@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class DestroyableObject : MonoBehaviour {
 
-    [SerializeField] public int startingHealth;
+    [SerializeField] int startingHealth;
     [SerializeField] GameObject destroyedObject;
     
     int currentHealth;
 
     void Awake() {
-        startingHealth = currentHealth;
+        currentHealth = startingHealth;
     }
 
     public void ReceiveDamage(int amount){
@@ -20,7 +20,7 @@ public class DestroyableObject : MonoBehaviour {
     }
 
     void DestroyObject() {
-        Instantiate(destroyedObject, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
+        Instantiate(destroyedObject, transform.position, Quaternion.identity);
     }
 }

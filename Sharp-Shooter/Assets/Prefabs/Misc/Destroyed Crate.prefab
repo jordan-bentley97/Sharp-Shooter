@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2565726937514469393}
   - component: {fileID: 2462883836708066985}
   - component: {fileID: 1199036702338731496}
-  - component: {fileID: 5410184386919373953}
+  - component: {fileID: 4596243689252300720}
   m_Layer: 2
   m_Name: Crate_Piece_08
   m_TagString: Untagged
@@ -96,7 +96,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334268781730634013}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &5410184386919373953
+--- !u!135 &4596243689252300720
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +134,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 30.982899
+  m_Radius: 30
   m_Center: {x: 59.8862, y: 83.020294, z: 19.290493}
 --- !u!1 &843282388788605530
 GameObject:
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 4471891693354182900}
   - component: {fileID: 293928315417859064}
   - component: {fileID: 205772785463694935}
-  - component: {fileID: 5067845930531443824}
+  - component: {fileID: 7245039652225832991}
   m_Layer: 2
   m_Name: Crate_Piece_09
   m_TagString: Untagged
@@ -232,7 +232,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843282388788605530}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -251,7 +251,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &5067845930531443824
+--- !u!135 &7245039652225832991
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,7 +270,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 47.95622
+  m_Radius: 30
   m_Center: {x: -55.833977, y: 49.88753, z: 20.865755}
 --- !u!1 &986424363939286807
 GameObject:
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 4191731067805297047}
   - component: {fileID: 4041725204987082588}
   - component: {fileID: 5434429691632746596}
-  - component: {fileID: 4914806470753126700}
+  - component: {fileID: 1303521942920408822}
   m_Layer: 2
   m_Name: Crate_Piece_017
   m_TagString: Untagged
@@ -368,7 +368,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986424363939286807}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -387,7 +387,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &4914806470753126700
+--- !u!135 &1303521942920408822
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -406,7 +406,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 58.69121
+  m_Radius: 30
   m_Center: {x: 0.08809662, y: 67.22351, z: -46.70768}
 --- !u!1 &1468752958884728812
 GameObject:
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 6449930831779736216}
   - component: {fileID: 8759937350794772545}
   - component: {fileID: 4969038026933255680}
-  - component: {fileID: 4359342822843296368}
+  - component: {fileID: 4169236622515389118}
   m_Layer: 2
   m_Name: Crate_Piece_020
   m_TagString: Untagged
@@ -504,7 +504,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468752958884728812}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -523,7 +523,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &4359342822843296368
+--- !u!135 &4169236622515389118
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -542,7 +542,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 58.691208
+  m_Radius: 30
   m_Center: {x: 0.08809471, y: 2.7195644, z: -19.832222}
 --- !u!1 &1868141420560585144
 GameObject:
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 3188997140792964321}
   - component: {fileID: 619504362342212068}
   - component: {fileID: 1765541886169745672}
-  - component: {fileID: 2086698043280437851}
+  - component: {fileID: 8119982319395401575}
   m_Layer: 2
   m_Name: Crate_Piece_010
   m_TagString: Untagged
@@ -640,7 +640,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868141420560585144}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -659,7 +659,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &2086698043280437851
+--- !u!135 &8119982319395401575
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -678,7 +678,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 48.00187
+  m_Radius: 30
   m_Center: {x: -55.833977, y: 49.84188, z: -6.847067}
 --- !u!1 &1896352056530602880
 GameObject:
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 7737898222663161096}
   - component: {fileID: 4925299119636548165}
   - component: {fileID: 7133986645034219994}
-  - component: {fileID: 4693461575829316418}
+  - component: {fileID: 6581027215805134825}
   m_Layer: 2
   m_Name: Crate_Piece_014
   m_TagString: Untagged
@@ -776,7 +776,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896352056530602880}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -795,7 +795,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &4693461575829316418
+--- !u!135 &6581027215805134825
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -814,7 +814,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 49.013878
+  m_Radius: 30
   m_Center: {x: 21.04467, y: 100.02877, z: -0.0009994507}
 --- !u!1 &2503041577214152428
 GameObject:
@@ -828,7 +828,7 @@ GameObject:
   - component: {fileID: 5790886515640610067}
   - component: {fileID: 6195237867353062765}
   - component: {fileID: 3473165788819918107}
-  - component: {fileID: 2341354227816378551}
+  - component: {fileID: 6658273694826357257}
   m_Layer: 2
   m_Name: Crate_Piece_07
   m_TagString: Untagged
@@ -912,7 +912,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2503041577214152428}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -931,7 +931,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &2341354227816378551
+--- !u!135 &6658273694826357257
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -950,7 +950,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 25.217274
+  m_Radius: 30
   m_Center: {x: 59.8862, y: 83.02029, z: -25.37843}
 --- !u!1 &2927614241196306806
 GameObject:
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 235858069685355637}
   - component: {fileID: 6085185257505649279}
   - component: {fileID: 3723597852321586111}
-  - component: {fileID: 3910007561384499517}
+  - component: {fileID: 7768037347265029112}
   m_Layer: 2
   m_Name: Crate_Piece_018
   m_TagString: Untagged
@@ -1048,7 +1048,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2927614241196306806}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1067,7 +1067,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &3910007561384499517
+--- !u!135 &7768037347265029112
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1086,7 +1086,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 58.691208
+  m_Radius: 30
   m_Center: {x: 0.08809471, y: 32.191547, z: -46.70768}
 --- !u!1 &2927710178014070982
 GameObject:
@@ -1100,7 +1100,7 @@ GameObject:
   - component: {fileID: 2448872580230978914}
   - component: {fileID: 1919262504891505891}
   - component: {fileID: 2096907890318962662}
-  - component: {fileID: 5952332947593856746}
+  - component: {fileID: 7588141602184872298}
   m_Layer: 2
   m_Name: Crate_Piece_013
   m_TagString: Untagged
@@ -1184,7 +1184,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2927710178014070982}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1203,7 +1203,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &5952332947593856746
+--- !u!135 &7588141602184872298
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1222,8 +1222,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 39.603294
-  m_Center: {x: -23.37725, y: 90.61818, z: -0.0009983778}
+  m_Radius: 30
+  m_Center: {x: -23.37725, y: 100.02876, z: -0.0009994507}
 --- !u!1 &3941221007580259911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 555110901424585219}
   - component: {fileID: 4457792523382520577}
   - component: {fileID: 491389248260983371}
-  - component: {fileID: 8849742985866234771}
+  - component: {fileID: 7888844053875428605}
   m_Layer: 2
   m_Name: Crate_Piece_02
   m_TagString: Untagged
@@ -1320,7 +1320,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3941221007580259911}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1339,7 +1339,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &8849742985866234771
+--- !u!135 &7888844053875428605
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1358,7 +1358,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 25.217276
+  m_Radius: 30
   m_Center: {x: -59.694427, y: 17.37871, z: 25.191603}
 --- !u!1 &5032839428634947285
 GameObject:
@@ -1521,7 +1521,7 @@ GameObject:
   - component: {fileID: 1637565085406133577}
   - component: {fileID: 2774307182699825530}
   - component: {fileID: 3591838599926340655}
-  - component: {fileID: 3397193624628202050}
+  - component: {fileID: 1521735422770890005}
   m_Layer: 2
   m_Name: Crate_Piece_015
   m_TagString: Untagged
@@ -1605,7 +1605,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5309132721508845244}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1624,7 +1624,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &3397193624628202050
+--- !u!135 &1521735422770890005
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1643,7 +1643,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 58.69121
+  m_Radius: 30
   m_Center: {x: 0.08809662, y: 68.45528, z: 46.71428}
 --- !u!1 &5663124499038344437
 GameObject:
@@ -1657,7 +1657,7 @@ GameObject:
   - component: {fileID: 6079220614521378098}
   - component: {fileID: 6433656819840990951}
   - component: {fileID: 1968985013369873251}
-  - component: {fileID: 7337943838286760468}
+  - component: {fileID: 6510504046070535451}
   m_Layer: 2
   m_Name: Crate_Piece_011
   m_TagString: Untagged
@@ -1741,7 +1741,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5663124499038344437}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1760,7 +1760,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &7337943838286760468
+--- !u!135 &6510504046070535451
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1779,7 +1779,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 48.00187
+  m_Radius: 30
   m_Center: {x: 56.01017, y: 49.84188, z: 10.000319}
 --- !u!1 &5789239888433132284
 GameObject:
@@ -1793,7 +1793,7 @@ GameObject:
   - component: {fileID: 5169018930326655629}
   - component: {fileID: 6557082410215808230}
   - component: {fileID: 1897715561352372404}
-  - component: {fileID: 4692143808755670269}
+  - component: {fileID: 117301357142410098}
   m_Layer: 2
   m_Name: Crate_Piece_012
   m_TagString: Untagged
@@ -1877,7 +1877,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5789239888433132284}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1896,7 +1896,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &4692143808755670269
+--- !u!135 &117301357142410098
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1915,7 +1915,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 48.00187
+  m_Radius: 30
   m_Center: {x: 56.01017, y: 49.84188, z: -16.59862}
 --- !u!1 &5918991076937636030
 GameObject:
@@ -1929,7 +1929,7 @@ GameObject:
   - component: {fileID: 8957659364059536996}
   - component: {fileID: 1231414207585583095}
   - component: {fileID: 8419257087362902303}
-  - component: {fileID: 7560244659509286490}
+  - component: {fileID: 811656644478663316}
   m_Layer: 2
   m_Name: Crate_Piece_016
   m_TagString: Untagged
@@ -2013,7 +2013,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5918991076937636030}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2032,7 +2032,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &7560244659509286490
+--- !u!135 &811656644478663316
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2051,7 +2051,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 58.69121
+  m_Radius: 30
   m_Center: {x: 0.08809662, y: 33.600086, z: 46.71428}
 --- !u!1 &6357593904989394718
 GameObject:
@@ -2065,7 +2065,7 @@ GameObject:
   - component: {fileID: 213347463925497092}
   - component: {fileID: 3092809896083165671}
   - component: {fileID: 3248544418176177626}
-  - component: {fileID: 7384975803763657948}
+  - component: {fileID: 4389941932484548985}
   m_Layer: 2
   m_Name: Crate_Piece_03
   m_TagString: Untagged
@@ -2149,7 +2149,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6357593904989394718}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2168,7 +2168,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &7384975803763657948
+--- !u!135 &4389941932484548985
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2187,7 +2187,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 25.217274
+  m_Radius: 30
   m_Center: {x: -59.694427, y: 83.02029, z: -25.37843}
 --- !u!1 &6931638859211119502
 GameObject:
@@ -2201,7 +2201,7 @@ GameObject:
   - component: {fileID: 3345762863684663601}
   - component: {fileID: 2994710600549114366}
   - component: {fileID: 6538754884588897122}
-  - component: {fileID: 4344940663481254858}
+  - component: {fileID: 394741513571321446}
   m_Layer: 2
   m_Name: Crate_Piece_04
   m_TagString: Untagged
@@ -2285,7 +2285,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6931638859211119502}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2304,7 +2304,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &4344940663481254858
+--- !u!135 &394741513571321446
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2323,7 +2323,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 29.705292
+  m_Radius: 30
   m_Center: {x: -59.694427, y: 83.02029, z: 20.5681}
 --- !u!1 &7552830406239689275
 GameObject:
@@ -2337,7 +2337,7 @@ GameObject:
   - component: {fileID: 8579340028397339348}
   - component: {fileID: 107605316773449622}
   - component: {fileID: 5169817229309846631}
-  - component: {fileID: 5696171067549891152}
+  - component: {fileID: 3570913367234259304}
   m_Layer: 2
   m_Name: Crate_Piece_06
   m_TagString: Untagged
@@ -2421,7 +2421,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7552830406239689275}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2440,7 +2440,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &5696171067549891152
+--- !u!135 &3570913367234259304
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2459,7 +2459,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 29.153915
+  m_Radius: 30
   m_Center: {x: 59.886196, y: 17.37871, z: 21.254963}
 --- !u!1 &7928021068520898161
 GameObject:
@@ -2473,7 +2473,7 @@ GameObject:
   - component: {fileID: 182870996367369637}
   - component: {fileID: 4587814218071614567}
   - component: {fileID: 3906667158541302679}
-  - component: {fileID: 6237044118364249088}
+  - component: {fileID: 6294910127572042347}
   m_Layer: 2
   m_Name: Crate_Piece_019
   m_TagString: Untagged
@@ -2557,7 +2557,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7928021068520898161}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2576,7 +2576,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &6237044118364249088
+--- !u!135 &6294910127572042347
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2595,7 +2595,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 58.691208
+  m_Radius: 30
   m_Center: {x: 0.08809471, y: 2.7712145, z: 20.259628}
 --- !u!1 &8371021812240039929
 GameObject:
@@ -2609,7 +2609,7 @@ GameObject:
   - component: {fileID: 6871217624240744163}
   - component: {fileID: 4025022057741735403}
   - component: {fileID: 9042080129135671112}
-  - component: {fileID: 5993952270054226816}
+  - component: {fileID: 8291905400024384909}
   m_Layer: 2
   m_Name: Crate_Piece_05
   m_TagString: Untagged
@@ -2693,7 +2693,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8371021812240039929}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2712,7 +2712,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &5993952270054226816
+--- !u!135 &8291905400024384909
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2731,7 +2731,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 26.096432
+  m_Radius: 30
   m_Center: {x: 59.886192, y: 17.378708, z: -24.363789}
 --- !u!1 &8375904509115241362
 GameObject:
@@ -2745,7 +2745,7 @@ GameObject:
   - component: {fileID: 4533279758155714855}
   - component: {fileID: 2216211763041484857}
   - component: {fileID: 4670157075333875231}
-  - component: {fileID: 8507373248534338690}
+  - component: {fileID: 7623839992992072136}
   m_Layer: 2
   m_Name: Crate_Piece_01
   m_TagString: Untagged
@@ -2829,7 +2829,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8375904509115241362}
   serializedVersion: 4
-  m_Mass: 2.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2848,7 +2848,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &8507373248534338690
+--- !u!135 &7623839992992072136
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2867,5 +2867,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 18.214579
-  m_Center: {x: -59.694427, y: 7.6417866, z: -22.508732}
+  m_Radius: 30
+  m_Center: {x: -59.694427, y: 17.37871, z: -22.508734}

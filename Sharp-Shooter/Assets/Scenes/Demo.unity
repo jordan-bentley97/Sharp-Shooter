@@ -19903,6 +19903,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2798981732365407533}
     - target: {fileID: 8559544566281486585, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
+      propertyPath: strength
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559544566281486585, guid: efcd67e8a74062843ab7d80c0ee18cb2, type: 3}
       propertyPath: pushLayers.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}

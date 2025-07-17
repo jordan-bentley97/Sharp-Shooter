@@ -73,15 +73,22 @@ public class ActiveWeapon : MonoBehaviour {
         if (!CurrentWeaponSO.CanZoom) return;
 
         if (starterAssetsInputs.zoom) {
+            if (CurrentWeaponSO.name.Equals("Sniper")) {
+                currentWeapon.gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+                zoomVignette.SetActive(true);
+            }
             weaponCamera.fieldOfView = CurrentWeaponSO.ZoomAmount;
             playerFollowCamera.m_Lens.FieldOfView = CurrentWeaponSO.ZoomAmount;
-            zoomVignette.SetActive(true);
             firstPersonController.ChangeRotationSpeed(CurrentWeaponSO.ZoomRotationSpeed);
-        } else {
+            
+        }
+        else {
+
             playerFollowCamera.m_Lens.FieldOfView = defaultFOV;
             weaponCamera.fieldOfView = defaultFOV;
             zoomVignette.SetActive(false);
             firstPersonController.ChangeRotationSpeed(defaultRotationSpeed);
+            currentWeapon.gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
 
         }
     }

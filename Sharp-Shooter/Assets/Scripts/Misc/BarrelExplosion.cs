@@ -19,7 +19,7 @@ public class BarrelExplosion : MonoBehaviour {
     void Explode() {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
 
-        HashSet<object> damaged = new HashSet<object>(); //adds an object to a dictionary, checks that object hasnt been damaged already before damaging
+        HashSet<object> damaged = new HashSet<object>(); //adds an object to a dictionary, can then check that object hasnt been damaged yet before damaging
 
         foreach (Collider hitCollider in hitColliders) {
             PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();

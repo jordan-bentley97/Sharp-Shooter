@@ -38,8 +38,12 @@ public class Weapon : MonoBehaviour {
             destroyableObject?.ReceiveDamage(weaponSO.Damage);
             //Debug.Log("Destroyable Object hit");
             
+            ExplodingBarrel explodingBarrel = hit.collider.gameObject.GetComponent<ExplodingBarrel>();
+            explodingBarrel?.ReceiveDamage(weaponSO.Damage);
+            //Debug.Log("Exploding Barrel hit");
+            
 
-            if (!enemyHealth && !destroyableObject) {
+            if (!enemyHealth && !destroyableObject && !explodingBarrel) { //stops floating bulletholes
                 Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting
                 Instantiate(bulletHoleVFX, offsetPosition, normalizedRotation);
             }

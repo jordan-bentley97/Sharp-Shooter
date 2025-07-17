@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Explosion : MonoBehaviour {
@@ -21,11 +22,11 @@ public class Explosion : MonoBehaviour {
         foreach (Collider hitCollider in hitColliders) {
             PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
 
-            if (!playerHealth) continue; //skips the current iteration (and doesnt execute rest of code) of the for loop if script is NOT found on a collider
+            if (!playerHealth) continue;
 
             playerHealth.TakeDamage(damage);
 
-            break; //exits the for loop entirely
+            break;
         }
     }
 }

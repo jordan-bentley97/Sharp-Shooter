@@ -132,10 +132,10 @@ GameObject:
   - component: {fileID: 4050903714189810410}
   - component: {fileID: 3419340160970795172}
   - component: {fileID: 706394735461636829}
-  - component: {fileID: 439794529939863951}
   - component: {fileID: 3039295912159938255}
+  - component: {fileID: 3643224896921917664}
   m_Layer: 0
-  m_Name: Explosion VFX
+  m_Name: Barrel Explosion VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4839,20 +4839,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &439794529939863951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482406643162879726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ad2450fb92a92f4f917c8a81f34fb9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 2
-  damage: 2
 --- !u!82 &3039295912159938255
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4995,6 +4981,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3643224896921917664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482406643162879726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f170e142f6de82a48924e90a16979a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  damage: 5
 --- !u!1 &6735984093996251658
 GameObject:
   m_ObjectHideFlags: 0

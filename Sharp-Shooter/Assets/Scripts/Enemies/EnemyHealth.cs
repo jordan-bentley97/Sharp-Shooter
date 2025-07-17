@@ -25,7 +25,8 @@ public class EnemyHealth : MonoBehaviour {
     public void TakeDamage(int amount){
         currentHealth -= amount;
 
-        if (hasHealthBar) {
+        if (hasHealthBar)
+        {
             healthbar.SetHealth(currentHealth);
         }
 

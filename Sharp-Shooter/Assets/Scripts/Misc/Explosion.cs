@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using Cinemachine;
 
 public class Explosion : MonoBehaviour {
 
@@ -7,6 +7,12 @@ public class Explosion : MonoBehaviour {
     [SerializeField] int damage;
     
     const string PLAYER_STRING = "Player";
+
+    CinemachineImpulseSource impulseSource;
+
+    void Awake() {
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+    }
 
     void Start() {
         Explode();
@@ -18,7 +24,11 @@ public class Explosion : MonoBehaviour {
     }
 
     void Explode() {
+
+        impulseSource.GenerateImpulse();
+
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
+        
         foreach (Collider hitCollider in hitColliders) {
             PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
 

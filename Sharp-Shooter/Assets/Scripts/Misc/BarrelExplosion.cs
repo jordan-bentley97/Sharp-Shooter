@@ -1,11 +1,19 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Cinemachine;
 
 public class BarrelExplosion : MonoBehaviour {
     [SerializeField] float radius = 1.5f;
     [SerializeField] int damage;
-    
+    [SerializeField] float explosionCameraShake;
+
     const string PLAYER_STRING = "Player";
+
+    CinemachineImpulseSource impulseSource;
+
+    void Awake() {
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+    }
 
     void Start() {
         Explode();
@@ -21,17 +29,22 @@ public class BarrelExplosion : MonoBehaviour {
 
         HashSet<object> damaged = new HashSet<object>(); //adds an object to a dictionary, can then check that object hasnt been damaged yet before damaging
 
-        foreach (Collider hitCollider in hitColliders) {
+        impulseSource.GenerateImpulse();
+
+        foreach (Collider hitCollider in hitColliders)
+        {
             PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
 
-            if (playerHealth != null && !damaged.Contains(playerHealth)) {
+            if (playerHealth != null && !damaged.Contains(playerHealth))
+            {
                 playerHealth.TakeDamage(damage);
                 damaged.Add(playerHealth);
             }
 
             EnemyHealth enemyHealth = hitCollider.GetComponent<EnemyHealth>();
 
-            if (enemyHealth != null && !damaged.Contains(enemyHealth)) {
+            if (enemyHealth != null && !damaged.Contains(enemyHealth))
+            {
                 enemyHealth.TakeDamage(damage);
                 damaged.Add(enemyHealth);
             }

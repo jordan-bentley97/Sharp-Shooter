@@ -122,8 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d203758316ee24d8d0c5cbdcda603d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 5
-  destroyedObject: {fileID: 5032839428634947285, guid: 7b09ca5c9a509904490de423551757ba, type: 3}
+  startingHealth: 1
+  destroyedObjectPrefab: {fileID: 5032839428634947285, guid: 7b09ca5c9a509904490de423551757ba, type: 3}
+  destroyedPeicesTimer: 3
 --- !u!54 &5053339932792638273
 Rigidbody:
   m_ObjectHideFlags: 0

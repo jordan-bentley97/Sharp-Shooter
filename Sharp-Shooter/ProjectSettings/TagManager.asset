@@ -7,6 +7,7 @@ TagManager:
   - CinemachineTarget
   - Pickups
   - Enemy
+  - Ignore Raycast
   layers:
   - Default
   - TransparentFX

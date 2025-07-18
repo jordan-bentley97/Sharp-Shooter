@@ -25,28 +25,28 @@ public class Weapon : MonoBehaviour {
         
         RaycastHit hit;
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, interactionLayers, QueryTriggerInteraction.Ignore)) {
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, interactionLayers, QueryTriggerInteraction.Ignore))
+        {
 
             Quaternion normalizedRotation = Quaternion.LookRotation(hit.normal);
             Instantiate(weaponSO.HitVFXPrefab, hit.point, normalizedRotation);
 
             EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>(); //turret collider is on child GO and robot collider is on parent GO. GetComponentInParent searches its own components before checking parents.
             enemyHealth?.TakeDamage(weaponSO.Damage);
-            //Debug.Log("Enemy hit");
 
             DestroyableObject destroyableObject = hit.collider.gameObject.GetComponent<DestroyableObject>();
-            destroyableObject?.ReceiveDamage(weaponSO.Damage);
-            //Debug.Log("Destroyable Object hit");
-            
+            destroyableObject?.TakeDamage(weaponSO.Damage);
+
             ExplodingBarrel explodingBarrel = hit.collider.gameObject.GetComponent<ExplodingBarrel>();
             explodingBarrel?.TakeDamage(weaponSO.Damage);
-            //Debug.Log("Exploding Barrel hit");
-            
 
-            if (!enemyHealth && !destroyableObject && !explodingBarrel) { //stops floating bulletholes
+            if (!enemyHealth)
+            {
                 Vector3 offsetPosition = hit.point + hit.normal * 0.001f; //stops z-fighting
-                Instantiate(bulletHoleVFX, offsetPosition, normalizedRotation);
+                ParticleSystem bulletHole = Instantiate(bulletHoleVFX, offsetPosition, normalizedRotation);
+                bulletHole.transform.SetParent(hit.transform, worldPositionStays: true);
             }
+
         }
     }
 }

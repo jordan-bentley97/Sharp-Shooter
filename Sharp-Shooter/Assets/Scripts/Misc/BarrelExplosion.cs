@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Cinemachine;
 
 public class BarrelExplosion : MonoBehaviour {
-    [SerializeField] float radius = 1.5f;
+    [SerializeField] float radius;
     [SerializeField] int damage;
     [SerializeField] float explosionCameraShake;
 
@@ -25,25 +25,35 @@ public class BarrelExplosion : MonoBehaviour {
     }
 
     void Explode() {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
-
-        HashSet<object> damaged = new HashSet<object>(); //adds an object to a dictionary, can then check that object hasnt been damaged yet before damaging
 
         impulseSource.GenerateImpulse();
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
+        HashSet<object> damaged = new HashSet<object>();
 
-        foreach (Collider hitCollider in hitColliders) {
+        foreach (Collider hitCollider in hitColliders)
+        {
+
             PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
+            EnemyHealth enemyHealth = hitCollider.GetComponent<EnemyHealth>();
+            DestroyableObject destroyableObject = hitCollider.GetComponent<DestroyableObject>();
 
-            if (playerHealth != null && !damaged.Contains(playerHealth)) {
+            if (playerHealth != null && !damaged.Contains(playerHealth))
+            {
                 playerHealth.TakeDamage(damage);
                 damaged.Add(playerHealth);
             }
 
-            EnemyHealth enemyHealth = hitCollider.GetComponent<EnemyHealth>();
 
-            if (enemyHealth != null && !damaged.Contains(enemyHealth)) {
+            if (enemyHealth != null && !damaged.Contains(enemyHealth))
+            {
                 enemyHealth.TakeDamage(damage);
                 damaged.Add(enemyHealth);
+            }
+            
+            if (destroyableObject != null && !damaged.Contains(destroyableObject))
+            {
+                destroyableObject.TakeDamage(damage);
+                damaged.Add(destroyableObject);
             }
         }
     }

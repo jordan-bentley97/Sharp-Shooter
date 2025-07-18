@@ -1,11 +1,12 @@
 using UnityEngine;
+using System.Linq;
 
 public class Projectile : MonoBehaviour {
 
     [SerializeField] float speed;
     [SerializeField] GameObject projectileHitVFX;
 
-    const string PICKUPS_TAG = "Pickups";
+    string[] ignoredTags = { "Pickups", "Ignore Raycast" };
 
     int damage;
     Rigidbody rb;
@@ -23,17 +24,19 @@ public class Projectile : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
-        if (!other.CompareTag(PICKUPS_TAG)) {
+        if (!ignoredTags.Contains(other.tag)) {
 
             Instantiate(projectileHitVFX, transform.position, Quaternion.identity);
 
             PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
             EnemyHealth enemyHealth = other.GetComponentInParent<EnemyHealth>();
             ExplodingBarrel explodingBarrel = other.GetComponent<ExplodingBarrel>();
+            DestroyableObject destroyableObject = other.GetComponent<DestroyableObject>();
 
             enemyHealth?.TakeDamage(damage);
             playerHealth?.TakeDamage(damage);
             explodingBarrel?.TakeDamage(damage);
+            destroyableObject?.TakeDamage(damage);
             
             Destroy(this.gameObject);
         }

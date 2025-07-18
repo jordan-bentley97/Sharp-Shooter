@@ -1,9 +1,10 @@
 using UnityEngine;
+using System.Collections.Generic;
 using Cinemachine;
 
 public class Explosion : MonoBehaviour {
 
-    [SerializeField] float radius = 1.5f;
+    [SerializeField] float radius;
     [SerializeField] int damage;
     
     const string PLAYER_STRING = "Player";
@@ -26,17 +27,26 @@ public class Explosion : MonoBehaviour {
     void Explode() {
 
         impulseSource.GenerateImpulse();
-
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
-        
-        foreach (Collider hitCollider in hitColliders) {
+        HashSet<object> damaged = new HashSet<object>();
+
+        foreach (Collider hitCollider in hitColliders)
+        {
+
             PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
+            DestroyableObject destroyableObject = hitCollider.GetComponent<DestroyableObject>();
 
-            if (!playerHealth) continue;
-
-            playerHealth.TakeDamage(damage);
-
-            break;
+            if (playerHealth != null && !damaged.Contains(playerHealth))
+            {
+                playerHealth.TakeDamage(damage);
+                damaged.Add(playerHealth);
+            }
+            
+            if (destroyableObject != null && !damaged.Contains(destroyableObject))
+            {
+                destroyableObject.TakeDamage(damage);
+                damaged.Add(destroyableObject);
+            }
         }
     }
 }

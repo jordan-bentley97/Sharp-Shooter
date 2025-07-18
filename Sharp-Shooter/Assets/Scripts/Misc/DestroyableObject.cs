@@ -1,26 +1,33 @@
+using System.Collections;
 using UnityEngine;
 
-public class DestroyableObject : MonoBehaviour {
+public class DestroyableObject : MonoBehaviour
+{
 
     [SerializeField] int startingHealth;
-    [SerializeField] GameObject destroyedObject;
-    
+    [SerializeField] GameObject destroyedObjectPrefab;
+
     int currentHealth;
 
-    void Awake() {
+    void Awake()
+    {
         currentHealth = startingHealth;
     }
 
-    public void ReceiveDamage(int amount){
+    public void TakeDamage(int amount)
+    {
         currentHealth -= amount;
 
-        if (currentHealth <= 0){
+        if (currentHealth <= 0)
+        {
             DestroyObject();
         }
     }
 
-    void DestroyObject() {
+    void DestroyObject()
+    {
         Destroy(this.gameObject);
-        Instantiate(destroyedObject, transform.position, Quaternion.identity);
+        Instantiate(destroyedObjectPrefab, transform.position, Quaternion.identity);
     }
+
 }

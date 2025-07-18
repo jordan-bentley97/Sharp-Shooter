@@ -3,7 +3,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
     [SerializeField] float speed;
-    [SerializeField] GameObject projectileVFX;
+    [SerializeField] GameObject projectileHitVFX;
 
     const string PICKUPS_TAG = "Pickups";
 
@@ -24,9 +24,17 @@ public class Projectile : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         if (!other.CompareTag(PICKUPS_TAG)) {
-            Instantiate(projectileVFX, transform.position, Quaternion.identity);
+
+            Instantiate(projectileHitVFX, transform.position, Quaternion.identity);
+
             PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
+            EnemyHealth enemyHealth = other.GetComponentInParent<EnemyHealth>();
+            ExplodingBarrel explodingBarrel = other.GetComponent<ExplodingBarrel>();
+
+            enemyHealth?.TakeDamage(damage);
             playerHealth?.TakeDamage(damage);
+            explodingBarrel?.TakeDamage(damage);
+            
             Destroy(this.gameObject);
         }
     }

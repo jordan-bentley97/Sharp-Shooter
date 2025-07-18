@@ -39,7 +39,7 @@ public class Weapon : MonoBehaviour {
             //Debug.Log("Destroyable Object hit");
             
             ExplodingBarrel explodingBarrel = hit.collider.gameObject.GetComponent<ExplodingBarrel>();
-            explodingBarrel?.ReceiveDamage(weaponSO.Damage);
+            explodingBarrel?.TakeDamage(weaponSO.Damage);
             //Debug.Log("Exploding Barrel hit");
             
 

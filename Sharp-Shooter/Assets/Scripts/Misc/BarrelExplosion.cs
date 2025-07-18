@@ -31,20 +31,17 @@ public class BarrelExplosion : MonoBehaviour {
 
         impulseSource.GenerateImpulse();
 
-        foreach (Collider hitCollider in hitColliders)
-        {
+        foreach (Collider hitCollider in hitColliders) {
             PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
 
-            if (playerHealth != null && !damaged.Contains(playerHealth))
-            {
+            if (playerHealth != null && !damaged.Contains(playerHealth)) {
                 playerHealth.TakeDamage(damage);
                 damaged.Add(playerHealth);
             }
 
             EnemyHealth enemyHealth = hitCollider.GetComponent<EnemyHealth>();
 
-            if (enemyHealth != null && !damaged.Contains(enemyHealth))
-            {
+            if (enemyHealth != null && !damaged.Contains(enemyHealth)) {
                 enemyHealth.TakeDamage(damage);
                 damaged.Add(enemyHealth);
             }

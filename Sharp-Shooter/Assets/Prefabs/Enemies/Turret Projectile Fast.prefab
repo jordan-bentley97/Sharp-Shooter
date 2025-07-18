@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8086238979778601560}
   - component: {fileID: -5613012821402397760}
   m_Layer: 6
-  m_Name: Turret Projectile
+  m_Name: Turret Projectile Fast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b741eb14aef864aad9d8d673b059ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 60
   projectileHitVFX: {fileID: 4568339857832471677, guid: ef964bf7733881c4d87f4e42beb1881c, type: 3}
 --- !u!54 &8086238979778601560
 Rigidbody:

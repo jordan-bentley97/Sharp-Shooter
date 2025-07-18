@@ -11,7 +11,7 @@ public class ExplodingBarrel : MonoBehaviour {
         currentHealth = startingHealth;
     }
 
-    public void ReceiveDamage(int amount){
+    public void TakeDamage(int amount){
         currentHealth -= amount;
 
         if (currentHealth <= 0){

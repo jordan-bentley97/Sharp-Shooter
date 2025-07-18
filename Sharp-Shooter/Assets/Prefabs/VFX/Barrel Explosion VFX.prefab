@@ -4997,6 +4997,8 @@ MonoBehaviour:
   radius: 5
   damage: 5
   explosionCameraShake: 5
+  explosionForce: 50
+  upwardModifier: 5
 --- !u!114 &8169944746201432872
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public class BarrelExplosion : MonoBehaviour {
     [SerializeField] float radius;
     [SerializeField] int damage;
     [SerializeField] float explosionCameraShake;
+    [SerializeField] float explosionForce;
+    [SerializeField] float upwardModifier;
 
     const string PLAYER_STRING = "Player";
 
@@ -34,8 +36,14 @@ public class BarrelExplosion : MonoBehaviour {
         {
 
             PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
-            EnemyHealth enemyHealth = hitCollider.GetComponent<EnemyHealth>();
+            EnemyHealth enemyHealth = hitCollider.GetComponentInParent<EnemyHealth>();
             DestroyableObject destroyableObject = hitCollider.GetComponent<DestroyableObject>();
+
+            Rigidbody rb = hitCollider.GetComponent<Rigidbody>();
+
+            if (rb != null) {
+                rb.AddExplosionForce(explosionForce, transform.position, radius, upwardModifier, ForceMode.Impulse);
+            }
 
             if (playerHealth != null && !damaged.Contains(playerHealth))
             {

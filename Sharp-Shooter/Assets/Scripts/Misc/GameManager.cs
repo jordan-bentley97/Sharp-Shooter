@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour {
 
     public bool isPaused;
 
-    [SerializeField] TMP_Text enemiesRemainingText;
     [SerializeField] GameObject levelCompleteText;
     [SerializeField] GameObject pauseContainer;
     [SerializeField] GameObject menuContainer;
@@ -72,7 +71,6 @@ public class GameManager : MonoBehaviour {
 
     public void AdjustEnemiesRemaining(int amount) {
         enemiesRemaining += amount;
-        enemiesRemainingText.text = ENEMIES_REMAINING_STRING + enemiesRemaining.ToString();
 
         if (enemiesRemaining <= 0)
         {

@@ -3,17 +3,23 @@ using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour
 {
-    [SerializeField] Slider slider;
+    Slider slider;
     EnemyHealth enemyHealth;
     Image fillImage;
     float maxHealth;
+
+    void Awake()
+    {
+        slider = GetComponent<Slider>();
+    }
 
     void Start()
     {
         fillImage = GetComponentInChildren<Image>();
         enemyHealth = GetComponentInParent<EnemyHealth>();
         SetMaxHealth(enemyHealth.startingHealth);
-        maxHealth = slider.maxValue;
+        maxHealth = enemyHealth.startingHealth;
+
     }
 
     public void SetHealth(int amount)

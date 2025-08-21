@@ -4,7 +4,6 @@ public class EnemyHealth : MonoBehaviour {
 
     [SerializeField] public int startingHealth;
     [SerializeField] GameObject explosionVFX;
-    [SerializeField] bool hasHealthBar;
 
     GameManager gameManager;
     int currentHealth;
@@ -12,9 +11,8 @@ public class EnemyHealth : MonoBehaviour {
     
     void Awake() {
         currentHealth = startingHealth;
-        if (hasHealthBar) {
-            healthbar = GetComponentInChildren<Healthbar>();
-        }
+        healthbar = GetComponentInChildren<Healthbar>();
+
     }
 
     void Start() { 
@@ -25,10 +23,7 @@ public class EnemyHealth : MonoBehaviour {
     public void TakeDamage(int amount){
         currentHealth -= amount;
 
-        if (hasHealthBar)
-        {
-            healthbar.SetHealth(currentHealth);
-        }
+        healthbar.SetHealth(currentHealth);
 
         if (currentHealth <= 0){
             SelfDestruct();

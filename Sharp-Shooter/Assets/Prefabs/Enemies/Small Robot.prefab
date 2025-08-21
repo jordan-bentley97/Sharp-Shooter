@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 2200178268396024042}
   - component: {fileID: 7262202491472606873}
   - component: {fileID: 1456985264349018095}
+  - component: {fileID: 4689909965376257467}
   m_Layer: 6
   m_Name: Small Robot
   m_TagString: Enemy
@@ -315,7 +316,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 1
   explosionVFX: {fileID: 482406643162879726, guid: 2a789e7270d39f042b71fccbdc2e1558, type: 3}
-  hasHealthBar: 0
 --- !u!95 &737529881445074937
 Animator:
   serializedVersion: 7
@@ -508,6 +508,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4689909965376257467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048732512177354276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e419e8cc335245749b5df7c89a3e5e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDetectionDistance: 50
+  viewAngleThreshold: 15
 --- !u!1 &7457281924563685278
 GameObject:
   m_ObjectHideFlags: 0

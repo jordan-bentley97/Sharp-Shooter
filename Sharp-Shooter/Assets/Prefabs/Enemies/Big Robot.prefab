@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 6650731261862155067}
   - component: {fileID: -8973213759171537697}
   - component: {fileID: 3223699961511088717}
+  - component: {fileID: 6013143705833526342}
   m_Layer: 6
   m_Name: Big Robot
   m_TagString: Enemy
@@ -606,7 +607,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 10
   explosionVFX: {fileID: 482406643162879726, guid: 4191fbb341f70144a88fa904ead26e52, type: 3}
-  hasHealthBar: 0
 --- !u!95 &3654840341234344539
 Animator:
   serializedVersion: 7
@@ -799,3 +799,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6013143705833526342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7743315328739873670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e419e8cc335245749b5df7c89a3e5e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDetectionDistance: 50
+  viewAngleThreshold: 15

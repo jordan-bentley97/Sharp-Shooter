@@ -5187,6 +5187,7 @@ GameObject:
   - component: {fileID: 2941532333633845593}
   - component: {fileID: 2955688087778970624}
   - component: {fileID: -3028506079692254195}
+  - component: {fileID: 7029316796521673990}
   m_Layer: 6
   m_Name: Turret
   m_TagString: Enemy
@@ -5225,7 +5226,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 15
   explosionVFX: {fileID: 482406643162879726, guid: 2a789e7270d39f042b71fccbdc2e1558, type: 3}
-  hasHealthBar: 1
 --- !u!114 &2955688087778970624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5343,6 +5343,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7029316796521673990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419631135593494888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e419e8cc335245749b5df7c89a3e5e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDetectionDistance: 50
+  viewAngleThreshold: 15
 --- !u!1 &5864284521959697463
 GameObject:
   m_ObjectHideFlags: 0
@@ -5767,7 +5781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.037703037, a: 1}
+  m_Color: {r: 0.02114594, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &979224822481174095
 Transform:
   m_ObjectHideFlags: 0
@@ -40,7 +40,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460773138734128310}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0.6, g: 0, b: 0.7882353, a: 1}
@@ -1590,15 +1590,15 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.3137255, g: 0.54509807, b: 0.12941177, a: 1}
-        key1: {r: 0.15686275, g: 1, b: 0, a: 1}
+        key0: {r: 0.94275093, g: 0, b: 1, a: 1}
+        key1: {r: 1, g: 0, b: 0.79149246, a: 1}
         key2: {r: 0.42745098, g: 0, b: 0, a: 1}
         key3: {r: 0.42745098, g: 0, b: 0, a: 0}
         key4: {r: 1, g: 0, b: 0, a: 0}
         key5: {r: 1, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 1928
+        ctime0: 0
         ctime1: 65535
         ctime2: 65535
         ctime3: 65535
@@ -1615,7 +1615,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -4054,7 +4054,7 @@ ParticleSystem:
       emitProbability: 1
   LightsModule:
     enabled: 1
-    ratio: 0
+    ratio: 1
     light: {fileID: 1300581227095103207}
     randomDistribution: 1
     color: 1
@@ -4116,7 +4116,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5246,6 +5246,9 @@ MonoBehaviour:
   damage: 2
   muzzleflash: {fileID: 2710999521276209493}
   rotationSpeed: 3
+  lineOfSightMask:
+    serializedVersion: 2
+    m_Bits: 9
 --- !u!82 &-3028506079692254195
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5355,8 +5358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e419e8cc335245749b5df7c89a3e5e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDetectionDistance: 50
-  viewAngleThreshold: 15
 --- !u!1 &5864284521959697463
 GameObject:
   m_ObjectHideFlags: 0
@@ -5415,7 +5416,7 @@ Transform:
   m_GameObject: {fileID: 6010230945310451155}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.538, z: 3}
+  m_LocalPosition: {x: 0, y: 0.538, z: 2.197}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

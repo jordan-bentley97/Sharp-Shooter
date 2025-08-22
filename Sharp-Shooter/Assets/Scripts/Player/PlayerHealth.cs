@@ -28,7 +28,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        Debug.Log("Player took " + amount + " damage.");
         currentHealth -= amount;
         AdjustShieldUI();
         audioSources[1].pitch = Random.Range(0.8f, 1.2f);

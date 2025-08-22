@@ -25,9 +25,12 @@ public class Turret : MonoBehaviour {
 
     void Update()
     {
-        Vector3 directionToPlayer = playerTargetPoint.position - turretHead.position;
-        Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
-        turretHead.rotation = Quaternion.Lerp(turretHead.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        if (playerTargetPoint != null)
+        {
+            Vector3 directionToPlayer = playerTargetPoint.position - turretHead.position;
+            Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
+            turretHead.rotation = Quaternion.Lerp(turretHead.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
     }
 
     IEnumerator FireRoutine() {
@@ -40,7 +43,6 @@ public class Turret : MonoBehaviour {
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, direction.magnitude, lineOfSightMask)) {
-                Debug.Log(hit.transform.tag);
                 if (hit.transform == playerTargetPoint || hit.collider.CompareTag("Player"))
                 {
                     // Fire

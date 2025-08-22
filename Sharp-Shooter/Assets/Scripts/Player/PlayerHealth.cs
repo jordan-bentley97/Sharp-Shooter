@@ -28,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        Debug.Log("Player took " + amount + " damage.");
         currentHealth -= amount;
         AdjustShieldUI();
         audioSources[1].pitch = Random.Range(0.8f, 1.2f);
@@ -84,13 +85,13 @@ public class PlayerHealth : MonoBehaviour
         if (healthAmount > halfHealth)
         {
             float t = (startingHealth - healthAmount) / halfHealth;
-            t = Mathf.Pow(t, 0.5f); 
+            t = Mathf.Pow(t, 0.5f);
             return Color.Lerp(Color.green, Color.yellow, t);
         }
         else
         {
             float t = healthAmount / halfHealth;
-            t = Mathf.Pow(t, 2f);
+            t = Mathf.Pow(t, 2f); 
             return Color.Lerp(Color.red, Color.yellow, t);
         }
     }

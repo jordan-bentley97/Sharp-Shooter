@@ -20,11 +20,11 @@ public class ExplodingBarrel : MonoBehaviour {
         currentHealth -= amount;
 
         if (currentHealth <= 0){
-            StartCoroutine(DestroyObject());
+            StartCoroutine(Explosion());
         }
     }
 
-    IEnumerator DestroyObject() {
+    IEnumerator Explosion() {
         ps.Play();
         yield return new WaitForSeconds(explosionDelay);
         Destroy(this.gameObject);

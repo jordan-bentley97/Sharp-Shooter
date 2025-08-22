@@ -5,7 +5,6 @@ using Cinemachine;
 public class BarrelExplosion : MonoBehaviour {
     [SerializeField] float radius;
     [SerializeField] int damage;
-    [SerializeField] float explosionCameraShake;
     [SerializeField] float explosionForce;
     [SerializeField] float upwardModifier;
 

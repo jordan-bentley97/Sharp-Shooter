@@ -4996,8 +4996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 5
   damage: 5
-  explosionCameraShake: 5
-  explosionForce: 50
+  explosionForce: 25
   upwardModifier: 5
 --- !u!114 &8169944746201432872
 MonoBehaviour:
@@ -9905,7 +9904,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 77fdff4a996e2374e89fe0f3873f6754, type: 2}
+  - {fileID: 2100000, guid: a0cec58fc32f482418596ffdf7c0d693, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

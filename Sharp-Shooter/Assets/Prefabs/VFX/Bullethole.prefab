@@ -3879,7 +3879,7 @@ ParticleSystem:
       emitProbability: 1
   LightsModule:
     enabled: 0
-    ratio: 0
+    ratio: 1
     light: {fileID: 2077008368892063599}
     randomDistribution: 1
     color: 1
@@ -4936,7 +4936,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0, g: 1, b: 0.019954205, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4981,7 +4981,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 3.4219887e-20, z: 9.518391e+34, w: -8.919567e+35}
+  m_BoundingSphereOverride: {x: 2.0135e-41, y: 2.524355e-29, z: 0, w: 4.3e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0

@@ -2,7 +2,10 @@ using UnityEngine;
 using System.Collections.Generic;
 using Cinemachine;
 
-public class BarrelExplosion : MonoBehaviour {
+// NOTE: ONLY player can damage a barrel to make it explode
+
+public class BarrelExplosion : MonoBehaviour
+{
     [SerializeField] float radius;
     [SerializeField] int damage;
     [SerializeField] float explosionForce;
@@ -12,20 +15,24 @@ public class BarrelExplosion : MonoBehaviour {
 
     CinemachineImpulseSource impulseSource;
 
-    void Awake() {
+    void Awake()
+    {
         impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
-    void Start() {
+    void Start()
+    {
         Explode();
     }
 
-    void OnDrawGizmos() {
+    void OnDrawGizmos()
+    {
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-    void Explode() {
+    void Explode()
+    {
 
         impulseSource.GenerateImpulse();
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
@@ -40,7 +47,8 @@ public class BarrelExplosion : MonoBehaviour {
 
             Rigidbody rb = hitCollider.GetComponent<Rigidbody>();
 
-            if (rb != null) {
+            if (rb != null)
+            {
                 rb.AddExplosionForce(explosionForce, transform.position, radius, upwardModifier, ForceMode.Impulse);
             }
 
@@ -56,7 +64,7 @@ public class BarrelExplosion : MonoBehaviour {
                 enemyHealth.TakeDamage(damage);
                 damaged.Add(enemyHealth);
             }
-            
+
             if (destroyableObject != null && !damaged.Contains(destroyableObject))
             {
                 destroyableObject.TakeDamage(damage);

@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Linq;
-using System.Collections.Generic;
 
 public class Projectile : MonoBehaviour {
 
@@ -34,12 +33,12 @@ public class Projectile : MonoBehaviour {
 
         PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
         EnemyHealth enemyHealth = other.GetComponentInParent<EnemyHealth>();
-        ExplodingBarrel explodingBarrel = other.GetComponent<ExplodingBarrel>();
+        //ExplodingBarrel explodingBarrel = other.GetComponent<ExplodingBarrel>(); Turrets shouldn't damage barrels
         DestroyableObject destroyableObject = other.GetComponent<DestroyableObject>();
 
         enemyHealth?.TakeDamage(damage);
         playerHealth?.TakeDamage(damage);
-        explodingBarrel?.TakeDamage(damage);
+        //explodingBarrel?.TakeDamage(damage);
         destroyableObject?.TakeDamage(damage);
 
         Destroy(gameObject);

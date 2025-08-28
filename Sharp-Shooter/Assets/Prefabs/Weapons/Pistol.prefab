@@ -290,7 +290,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_ImpulseDuration: 0.2
+    m_ImpulseDuration: 0.3
     m_ImpulseType: 0
     m_DissipationRate: 0
     m_RawSignal: {fileID: 0}
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_DissipationMode: 2
     m_DissipationDistance: 100
     m_PropagationSpeed: 343
-  m_DefaultVelocity: {x: 0, y: 0.2, z: 0}
+  m_DefaultVelocity: {x: 0, y: -0.2, z: -0.2}
 --- !u!82 &-8320061492534539801
 AudioSource:
   m_ObjectHideFlags: 0

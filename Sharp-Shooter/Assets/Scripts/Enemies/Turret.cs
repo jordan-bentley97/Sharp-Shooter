@@ -10,9 +10,8 @@ public class Turret : MonoBehaviour {
     [SerializeField] float fireRate;
     [SerializeField] int damage;
     [SerializeField] ParticleSystem muzzleflash;
-    [SerializeField] float rotationSpeed = 2.0f;
-
-    PlayerHealth player;
+    [SerializeField] float rotationSpeed;
+    [SerializeField] LayerMask lineOfSightMask;
 
     AudioSource audioSource;
 
@@ -21,12 +20,13 @@ public class Turret : MonoBehaviour {
     }
 
     void Start() {
-        player = FindFirstObjectByType<PlayerHealth>();
         StartCoroutine(FireRoutine());
     }
 
-    void Update() {
-        if (player) {
+    void Update()
+    {
+        if (playerTargetPoint != null)
+        {
             Vector3 directionToPlayer = playerTargetPoint.position - turretHead.position;
             Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
             turretHead.rotation = Quaternion.Lerp(turretHead.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -34,13 +34,25 @@ public class Turret : MonoBehaviour {
     }
 
     IEnumerator FireRoutine() {
-        while (player) {
+        while (true) {
             yield return new WaitForSeconds(fireRate);
-            Projectile newProjectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity).GetComponent<Projectile>();
-            newProjectile.transform.LookAt(playerTargetPoint);
-            newProjectile.Init(damage);
-            muzzleflash.Play();
-            audioSource.Play();
+
+            // Check line of sight
+            Vector3 direction = playerTargetPoint.position - projectileSpawnPoint.position;
+            Ray ray = new Ray(projectileSpawnPoint.position, direction.normalized);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, direction.magnitude, lineOfSightMask)) {
+                if (hit.transform == playerTargetPoint || hit.collider.CompareTag("Player"))
+                {
+                    // Fire
+                    Projectile newProjectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity).GetComponent<Projectile>();
+                    newProjectile.transform.LookAt(playerTargetPoint);
+                    newProjectile.Init(damage);
+                    muzzleflash.Play();
+                    audioSource.Play();
+                }
+            }
         }
     }
 }

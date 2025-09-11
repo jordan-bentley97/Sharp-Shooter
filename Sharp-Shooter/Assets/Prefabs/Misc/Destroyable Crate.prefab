@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2314139321201522013}
   - component: {fileID: 6638440897444574933}
   - component: {fileID: 5053339932792638273}
+  - component: {fileID: 6162105400823233235}
   m_Layer: 0
   m_Name: Destroyable Crate
   m_TagString: Untagged
@@ -124,7 +125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 1
   destroyedObjectPrefab: {fileID: 5032839428634947285, guid: 7b09ca5c9a509904490de423551757ba, type: 3}
-  destroyedPeicesTimer: 3
 --- !u!54 &5053339932792638273
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -152,3 +152,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &6162105400823233235
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9029595687471667215}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 60.886, y: 51.176003, z: 50.502003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.096, y: 51.057003, z: -0.093}
+  m_TimeToStationary: 0.5

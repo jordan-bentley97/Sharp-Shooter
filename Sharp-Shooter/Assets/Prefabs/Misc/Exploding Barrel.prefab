@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5278275556000740771}
   - component: {fileID: 5347129868311027986}
   - component: {fileID: 2978458354138297045}
+  - component: {fileID: 6178236130483257453}
   m_Layer: 0
   m_Name: Exploding Barrel
   m_TagString: Untagged
@@ -108,6 +109,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &6178236130483257453
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602971128662534385}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.9, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1807988181446826546
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,7 +58,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 1
   explosionVFX: {fileID: 482406643162879726, guid: 142238e86e37d434e861bd2767d387f4, type: 3}
-  explosionDelay: 3
+  explosionDelay: 2
 --- !u!54 &5347129868311027986
 Rigidbody:
   m_ObjectHideFlags: 0

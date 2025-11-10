@@ -1,4 +1,6 @@
-The robot invasion started while you were working your job at the foundry but luckily you brought your handy-dandy lazer pistol to work! Out-run and out-gun the invaders so you can destroy their portals to stop them from spawning...you know ammo doesn't grow on trees right? Look out for ammo boxes, health packs and even more powerful guns.
+The robot invasion started while you were working your job at the ammo factory. Luckily, you brought your lazer pistol to work!
+
+Out-run and out-gun the robots then destroy their portals to stop them from spawning. Look out for ammo boxes, health packs and even more powerful guns.
 
 Sharp-Shooter is a first-person-shooter game made in Unity following [this course](https://www.udemy.com/course/unitycourse2/) with extra levels, enemies and polish added by me. 
 

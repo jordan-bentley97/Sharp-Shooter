@@ -1533,7 +1533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 6
-  explosionForce: 5
+  explosionForce: 3
   explosionRadius: 5
   upwardsModifier: 1
 --- !u!1 &5309132721508845244
